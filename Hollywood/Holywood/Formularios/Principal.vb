@@ -27,9 +27,11 @@
         Return socio
     End Function
 
-    Private Sub cmd_actores_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmd_artistas.Click
+    Private Sub cmd_actores_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) _
+        Handles cmd_artistas.Click
         Inicio.artistas = New frm_artistas()
-        Inicio.artistas.ShowDialog() 'el metodo ShowDialog hace que la nueva ventana se muestre de forma que no permita seguir usando esta ventana hasta que se cierre la nueva.
+        Inicio.artistas.ShowDialog() 'el metodo ShowDialog hace que la nueva ventana se muestre de forma que _
+        ' no permita seguir usando esta ventana hasta que se cierre la nueva.
         Inicio.artistas = Nothing 'esto libera un poco la memoria que usa la aplicacion.
     End Sub
 
@@ -83,11 +85,13 @@
             Dim formato As String = tabla_form.Rows(0)("descripcion")
             Dim fecha_estreno As String = (tabla.Rows(c)("fecha_estreno")).ToString.Substring(0, 10)
             Me.grid_peliculas.Rows.Add(tabla.Rows(c)("nombre"), fecha_estreno, genero, formato, _
-                                        tabla.Rows(c)("precio_alquiler"), Me.formatear_fecha(tabla.Rows(c)("fecha_baja").ToString), "", "", _
+                                        tabla.Rows(c)("precio_alquiler"), _
+                                        Me.formatear_fecha(tabla.Rows(c)("fecha_baja").ToString), "", "", _
                                         tabla.Rows(c)("codigo_pelicula"), tabla.Rows(c)("id_genero"), _
                                         tabla.Rows(c)("id_formato"))
             Me.grid_peliculas_usuarios.Rows.Add(tabla.Rows(c)("nombre"), fecha_estreno, genero, formato, _
-                                        tabla.Rows(c)("precio_alquiler"), Me.formatear_fecha(tabla.Rows(c)("fecha_baja").ToString), "", "", _
+                                        tabla.Rows(c)("precio_alquiler"), _
+                                        Me.formatear_fecha(tabla.Rows(c)("fecha_baja").ToString), "", "", _
                                         tabla.Rows(c)("codigo_pelicula"), tabla.Rows(c)("id_genero"), _
                                         tabla.Rows(c)("id_formato"))
         Next
@@ -98,7 +102,9 @@
         End If
     End Sub
 
-    Private Sub grid_artistas_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles grid_peliculas.CellContentClick
+    Private Sub grid_artistas_CellContentClick(ByVal sender As System.Object, _
+                        ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) _
+                        Handles grid_peliculas.CellContentClick
         If Me.grid_peliculas.Rows(e.RowIndex).Cells("grid_fecha_baja").Value <> "-" Then
             MsgBox("No es posible modificar ni dar de baja películas que ya fueron dadas de baja.", _
                    MsgBoxStyle.Information, "Error")
@@ -122,8 +128,10 @@
     End Sub
 
     Private Function dar_baja() As Boolean
-        If MsgBox("¿Está seguro que desea dar de baja esta pelicula?", MsgBoxStyle.YesNo, "Confirmación") = Windows.Forms.DialogResult.Yes Then
-            Me.acceso.registrar_baja("codigo_pelicula", Me.grid_peliculas.CurrentRow.Cells("grid_pelicula_codigo").Value.ToString())
+        If MsgBox("¿Está seguro que desea dar de baja esta pelicula?", MsgBoxStyle.YesNo, "Confirmación") _
+                            = Windows.Forms.DialogResult.Yes Then
+            Me.acceso.registrar_baja("codigo_pelicula", _
+                            Me.grid_peliculas.CurrentRow.Cells("grid_pelicula_codigo").Value.ToString())
             MsgBox("Pelicula se ha dado de baja exitosamente.", MsgBoxStyle.Information, "Dada de baja exitosa")
             Return True
         End If
@@ -186,7 +194,9 @@
         Me.cmb_genero.SelectedIndex = -1
     End Sub
 
-    Private Sub grid_artistas_usuarios_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles grid_peliculas_usuarios.CellContentClick
+    Private Sub grid_artistas_usuarios_CellContentClick(ByVal sender As System.Object, _
+                        ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) _
+                    Handles grid_peliculas_usuarios.CellContentClick
         If e.ColumnIndex = 5 Then
             Me.alquiler_actual.Rows.Add(Me.grid_peliculas_usuarios("titulo", e.RowIndex).Value, _
                                         Me.grid_peliculas_usuarios("formato", e.RowIndex).Value, _
@@ -195,14 +205,16 @@
         End If
     End Sub
 
-    Private Sub carga_combo(ByRef combo As ComboBox, ByRef datos As Data.DataTable, ByVal pk As String, ByVal descripcion As String)
+    Private Sub carga_combo(ByRef combo As ComboBox, ByRef datos As Data.DataTable, ByVal pk As String, _
+                        ByVal descripcion As String)
         combo.Items.Clear()
         combo.DataSource = datos
         combo.ValueMember = pk
         combo.DisplayMember = descripcion
     End Sub
 
-    Private Sub cmd_formatos_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmd_formatos.Click
+    Private Sub cmd_formatos_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) _
+                        Handles cmd_formatos.Click
         Inicio.formatos = New frm_formatos()
         Inicio.formatos.ShowDialog()
         Inicio.formatos = Nothing
@@ -244,7 +256,8 @@
         Me.cmd_nueva.Visible = True
     End Sub
 
-    Private Sub cmd_alquilar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmd_alquilar.Click
+    Private Sub cmd_alquilar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) _
+                        Handles cmd_alquilar.Click
         If Me.alquiler_actual Is Nothing Then
             MessageBox.Show("Debe agregar películas al carrito para poder proceder con el alquiler.", "Error", _
                             MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -259,12 +272,19 @@
                                                    MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If respuesta = DialogResult.Yes Then
             inicio.Visible = True
-            Me.Close()
+            Me.Visible = False
         End If
     End Sub
 
-    Private Sub Principal_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
-        Inicio.salir()
+    Private Sub Principal_FormClosing(ByVal sender As System.Object, _
+                        ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
+        Dim respuesta As Integer = MessageBox.Show("¿Está seguro de que desea cerrar la aplicación?", "Salir", _
+                                                   MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If respuesta = DialogResult.Yes Then
+            Inicio.Close()
+        Else
+            e.Cancel = True
+        End If
     End Sub
 
 End Class

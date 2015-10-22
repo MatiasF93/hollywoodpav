@@ -29,11 +29,14 @@
             Me.cmb_tipo_doc.Enabled = False
             Me.txt_documento.Enabled = False
             Me.txt_documento.Clear()
+            Me.txt_contrasena.Focus()
         Else
             Me.lbl_contrasena.Visible = False
             Me.txt_contrasena.Visible = False
             Me.cmb_tipo_doc.Enabled = True
             Me.txt_documento.Enabled = True
+            Me.txt_contrasena.Clear()
+            Me.txt_documento.Focus()
         End If
     End Sub
 
@@ -41,6 +44,9 @@
         cmd_ingresar.Click
         If Me.chb_admin.Checked Then
             If Me.validar_contrasena() Then
+                If Not principal Is Nothing Then
+                    Me.principal.Dispose()
+                End If
                 Me.principal = New Principal()
                 Me.principal.Show()
                 Me.Visible = False
@@ -75,14 +81,11 @@
     End Function
 
     Private Sub cmd_salir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmd_salir.Click
-        Me.salir()
-    End Sub
-
-    Public Sub salir()
         Dim respuesta As Integer = MessageBox.Show("¿Está seguro de que desea cerrar la aplicación?", "Salir", _
                                                    MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If respuesta = DialogResult.Yes Then
             Application.Exit()
         End If
     End Sub
+
 End Class
