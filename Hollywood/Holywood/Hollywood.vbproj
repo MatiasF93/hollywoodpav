@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3363A7B0-E626-448A-B04F-ED4E71CED1EB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>WindowsApplication1.My.MyApplication</StartupObject>
+    <RootNamespace>WindowsApplication1</RootNamespace>
+    <AssemblyName>Holywood</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Holywood.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Holywood.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\Acceso_Datos.vb" />
+    <Compile Include="Clases\MaskedTextBox_v1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Clases\Procesos_Formulario.vb" />
+    <Compile Include="Clases\Socio.vb" />
+    <Compile Include="Clases\TextBox_v1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Alquiler.Designer.vb">
+      <DependentUpon>Alquiler.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Alquiler.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Artistas.Designer.vb">
+      <DependentUpon>Artistas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Artistas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Autorizados_socio.Designer.vb">
+      <DependentUpon>Autorizados_socio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Autorizados_socio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataSets\DataSet_autorizadosXsocio.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_autorizadosXsocio.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\DataSet_autorizadosXsocio.vb">
+      <DependentUpon>DataSet_autorizadosXsocio.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Inicio.Designer.vb">
+      <DependentUpon>Inicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Inicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Listado_autorizadosXsocio.Designer.vb">
+      <DependentUpon>Listado_autorizadosXsocio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Listado_autorizadosXsocio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Recarga_saldo.Designer.vb">
+      <DependentUpon>Recarga_saldo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Recarga_saldo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Registrar_socio.Designer.vb">
+      <DependentUpon>Registrar_socio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Registrar_socio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Registrar_pelicula.Designer.vb">
+      <DependentUpon>Registrar_pelicula.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Registrar_pelicula.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Formatos.Designer.vb">
+      <DependentUpon>Formatos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Formatos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Socios.Designer.vb">
+      <DependentUpon>Socios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Socios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Principal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Principal.Designer.vb">
+      <DependentUpon>Principal.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Registrar_artista.Designer.vb">
+      <DependentUpon>Registrar_artista.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Registrar_artista.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Formularios\Alquiler.resx">
+      <DependentUpon>Alquiler.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Artistas.resx">
+      <DependentUpon>Artistas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Autorizados_socio.resx">
+      <DependentUpon>Autorizados_socio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Formatos.resx">
+      <DependentUpon>Formatos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Inicio.resx">
+      <DependentUpon>Inicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Listado_autorizadosXsocio.resx">
+      <DependentUpon>Listado_autorizadosXsocio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Recarga_saldo.resx">
+      <DependentUpon>Recarga_saldo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Registrar_pelicula.resx">
+      <DependentUpon>Registrar_pelicula.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Registrar_socio.resx">
+      <DependentUpon>Registrar_socio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Reporte_autorizadosXsocio.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Socios.resx">
+      <DependentUpon>Socios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Principal.resx">
+      <DependentUpon>Principal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Registrar_artista.resx">
+      <DependentUpon>Registrar_artista.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSets\DataSet_autorizadosXsocio.xsc">
+      <DependentUpon>DataSet_autorizadosXsocio.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DataSet_autorizadosXsocio.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_autorizadosXsocio.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSets\DataSet_autorizadosXsocio.xss">
+      <DependentUpon>DataSet_autorizadosXsocio.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\DataSet_autorizadosXsocio.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\112_Tick_Green - copia.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\077_AddFile - copia.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\112_LeftArrowLong_Blue - copia.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\Users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\Iconos\112_Plus_Green - copia.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
