@@ -22,12 +22,12 @@ Partial Class Principal
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.lbl_logo = New System.Windows.Forms.Label()
         Me.lbl_bienvenido = New System.Windows.Forms.Label()
         Me.cmd_sesion = New System.Windows.Forms.Button()
@@ -64,9 +64,6 @@ Partial Class Principal
         Me.grid_id_genero = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.grid_id_formato = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cmd_nueva = New System.Windows.Forms.Button()
-        Me.txt_director = New WindowsApplication1.TextBox_v1()
-        Me.txt_actor = New WindowsApplication1.TextBox_v1()
-        Me.txt_pelicula = New WindowsApplication1.TextBox_v1()
         Me.cmd_buscar = New System.Windows.Forms.Button()
         Me.lbl_director = New System.Windows.Forms.Label()
         Me.lbl_actor = New System.Windows.Forms.Label()
@@ -75,6 +72,9 @@ Partial Class Principal
         Me.lbl_pelicula = New System.Windows.Forms.Label()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.txt_director = New WindowsApplication1.TextBox_v1()
+        Me.txt_actor = New WindowsApplication1.TextBox_v1()
+        Me.txt_pelicula = New WindowsApplication1.TextBox_v1()
         Me.Panel1.SuspendLayout()
         Me.pnl_botones_socio.SuspendLayout()
         Me.pnl_botones_admin.SuspendLayout()
@@ -89,7 +89,7 @@ Partial Class Principal
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lbl_logo.AutoEllipsis = True
         Me.lbl_logo.Cursor = System.Windows.Forms.Cursors.Default
-        Me.lbl_logo.Font = New System.Drawing.Font("SF Hollywood Hills", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_logo.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_logo.Location = New System.Drawing.Point(24, 10)
         Me.lbl_logo.Name = "lbl_logo"
         Me.lbl_logo.Size = New System.Drawing.Size(332, 148)
@@ -254,36 +254,36 @@ Partial Class Principal
         Me.grid_peliculas_usuarios.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.grid_peliculas_usuarios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.grid_peliculas_usuarios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.grid_peliculas_usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grid_peliculas_usuarios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.titulo, Me.fecha_estreno, Me.genero, Me.formato, Me.precio, Me.DataGridViewButtonColumn1, Me.codigo})
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.grid_peliculas_usuarios.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.grid_peliculas_usuarios.DefaultCellStyle = DataGridViewCellStyle2
         Me.grid_peliculas_usuarios.Location = New System.Drawing.Point(32, 160)
         Me.grid_peliculas_usuarios.Name = "grid_peliculas_usuarios"
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.grid_peliculas_usuarios.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.grid_peliculas_usuarios.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.grid_peliculas_usuarios.Size = New System.Drawing.Size(715, 336)
-        Me.grid_peliculas_usuarios.TabIndex = 23
+        Me.grid_peliculas_usuarios.TabIndex = 0
         Me.grid_peliculas_usuarios.Visible = False
         '
         'titulo
@@ -355,34 +355,34 @@ Partial Class Principal
         Me.grid_peliculas.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.grid_peliculas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.grid_peliculas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.grid_peliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grid_peliculas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.grid_pelicula_titulo, Me.grid_pelicula_fecha_estreno, Me.grid_pelicula_genero, Me.grid_pelicula_formato, Me.grid_pelicula_precio, Me.grid_fecha_baja, Me.modificar, Me.eliminar, Me.grid_pelicula_codigo, Me.grid_id_genero, Me.grid_id_formato})
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.grid_peliculas.DefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.grid_peliculas.DefaultCellStyle = DataGridViewCellStyle5
         Me.grid_peliculas.Location = New System.Drawing.Point(32, 160)
         Me.grid_peliculas.Name = "grid_peliculas"
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.grid_peliculas.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.grid_peliculas.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.grid_peliculas.Size = New System.Drawing.Size(715, 336)
         Me.grid_peliculas.TabIndex = 22
         '
@@ -476,33 +476,6 @@ Partial Class Principal
         Me.cmd_nueva.TabIndex = 20
         Me.cmd_nueva.UseVisualStyleBackColor = True
         '
-        'txt_director
-        '
-        Me.txt_director._mensaje_error = ""
-        Me.txt_director._validar = True
-        Me.txt_director.Location = New System.Drawing.Point(352, 98)
-        Me.txt_director.Name = "txt_director"
-        Me.txt_director.Size = New System.Drawing.Size(164, 20)
-        Me.txt_director.TabIndex = 17
-        '
-        'txt_actor
-        '
-        Me.txt_actor._mensaje_error = ""
-        Me.txt_actor._validar = True
-        Me.txt_actor.Location = New System.Drawing.Point(352, 64)
-        Me.txt_actor.Name = "txt_actor"
-        Me.txt_actor.Size = New System.Drawing.Size(164, 20)
-        Me.txt_actor.TabIndex = 16
-        '
-        'txt_pelicula
-        '
-        Me.txt_pelicula._mensaje_error = ""
-        Me.txt_pelicula._validar = True
-        Me.txt_pelicula.Location = New System.Drawing.Point(95, 64)
-        Me.txt_pelicula.Name = "txt_pelicula"
-        Me.txt_pelicula.Size = New System.Drawing.Size(167, 20)
-        Me.txt_pelicula.TabIndex = 15
-        '
         'cmd_buscar
         '
         Me.cmd_buscar.Image = Global.WindowsApplication1.My.Resources.Resources.search
@@ -576,6 +549,33 @@ Partial Class Principal
         Me.LineShape1.X2 = 749
         Me.LineShape1.Y1 = 144
         Me.LineShape1.Y2 = 144
+        '
+        'txt_director
+        '
+        Me.txt_director._mensaje_error = ""
+        Me.txt_director._validar = True
+        Me.txt_director.Location = New System.Drawing.Point(352, 98)
+        Me.txt_director.Name = "txt_director"
+        Me.txt_director.Size = New System.Drawing.Size(164, 20)
+        Me.txt_director.TabIndex = 17
+        '
+        'txt_actor
+        '
+        Me.txt_actor._mensaje_error = ""
+        Me.txt_actor._validar = True
+        Me.txt_actor.Location = New System.Drawing.Point(352, 64)
+        Me.txt_actor.Name = "txt_actor"
+        Me.txt_actor.Size = New System.Drawing.Size(164, 20)
+        Me.txt_actor.TabIndex = 16
+        '
+        'txt_pelicula
+        '
+        Me.txt_pelicula._mensaje_error = ""
+        Me.txt_pelicula._validar = True
+        Me.txt_pelicula.Location = New System.Drawing.Point(95, 64)
+        Me.txt_pelicula.Name = "txt_pelicula"
+        Me.txt_pelicula.Size = New System.Drawing.Size(167, 20)
+        Me.txt_pelicula.TabIndex = 15
         '
         'Principal
         '

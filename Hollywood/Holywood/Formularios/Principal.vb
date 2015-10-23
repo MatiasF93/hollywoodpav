@@ -1,11 +1,15 @@
 ﻿Public Class Principal
-
+    Enum estado
+        primera
+        otras
+    End Enum
     Dim socio_actual As Socio
     Dim registrar As frm_registrar_pelicula
     Dim acceso As New Acceso_Datos With { _
         ._esquema = "dbo." _
         , ._tabla = "peliculas"}
     Dim alquiler_actual As Data.DataTable
+    Dim estado_alquiler As estado = estado.primera
 
     Public Sub New(ByVal num_socio As Integer)
         Me.socio_actual = Me.obtener_socio(num_socio)
@@ -90,9 +94,8 @@
                                         tabla.Rows(c)("codigo_pelicula"), tabla.Rows(c)("id_genero"), _
                                         tabla.Rows(c)("id_formato"))
             Me.grid_peliculas_usuarios.Rows.Add(tabla.Rows(c)("nombre"), fecha_estreno, genero, formato, _
-                                        tabla.Rows(c)("precio_alquiler"), _
-                                        Me.formatear_fecha(tabla.Rows(c)("fecha_baja").ToString), "", "", _
-                                        tabla.Rows(c)("codigo_pelicula"), tabla.Rows(c)("id_genero"), _
+                                        tabla.Rows(c)("precio_alquiler"), "", tabla.Rows(c)("codigo_pelicula"), _
+                                        tabla.Rows(c)("id_genero"), _
                                         tabla.Rows(c)("id_formato"))
         Next
         If chb_dados_baja.Checked Then
@@ -198,10 +201,25 @@
                         ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) _
                     Handles grid_peliculas_usuarios.CellContentClick
         If e.ColumnIndex = 5 Then
-            Me.alquiler_actual.Rows.Add(Me.grid_peliculas_usuarios("titulo", e.RowIndex).Value, _
+            'Me.alquiler_actual.Rows.Add(Me.grid_peliculas_usuarios("titulo", e.RowIndex).Value, _
+            '                            Me.grid_peliculas_usuarios("formato", e.RowIndex).Value, _
+            '                            Me.grid_peliculas_usuarios("precio", e.RowIndex).Value, _
+            '                            Me.grid_peliculas_usuarios("codigo", e.RowIndex).Value)
+           
+            If Inicio.alquiler Is Nothing Then
+                Inicio.alquiler = New Alquiler(Me.alquiler_actual)
+                Inicio.alquiler.Show()
+                If estado_alquiler = estado.primera Then
+                    Inicio.alquiler.tomarSocio(Me.socio_actual)
+                End If
+            Else
+                Inicio.alquiler.BringToFront()
+            End If
+            Inicio.alquiler.agregar_pelicula(Me.grid_peliculas_usuarios("titulo", e.RowIndex).Value, _
                                         Me.grid_peliculas_usuarios("formato", e.RowIndex).Value, _
                                         Me.grid_peliculas_usuarios("precio", e.RowIndex).Value, _
                                         Me.grid_peliculas_usuarios("codigo", e.RowIndex).Value)
+
         End If
     End Sub
 

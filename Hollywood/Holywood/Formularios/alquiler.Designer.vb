@@ -25,15 +25,18 @@ Partial Class Alquiler
         Me.lbl_usuario = New System.Windows.Forms.Label()
         Me.lbl_alquiler = New System.Windows.Forms.Label()
         Me.grid_carro_peliculas = New System.Windows.Forms.DataGridView()
-        Me.lbl_carro = New System.Windows.Forms.Label()
-        Me.lbl_total = New System.Windows.Forms.Label()
-        Me.btn_cancelar = New System.Windows.Forms.Button()
-        Me.cmd_aceptar = New System.Windows.Forms.Button()
         Me.titulo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.formato = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.grid_pelicula_precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.quitar = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.lbl_carro = New System.Windows.Forms.Label()
+        Me.btn_cancelar = New System.Windows.Forms.Button()
+        Me.cmd_aceptar = New System.Windows.Forms.Button()
+        Me.lbl_monto_total = New System.Windows.Forms.Label()
+        Me.lbl_total = New System.Windows.Forms.Label()
+        Me.lbl_fecha_devolucion = New System.Windows.Forms.Label()
+        Me.DateTimePicker_fecha_devolucion = New System.Windows.Forms.DateTimePicker()
         CType(Me.grid_carro_peliculas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -41,7 +44,7 @@ Partial Class Alquiler
         '
         Me.lbl_usuario.AutoSize = True
         Me.lbl_usuario.Font = New System.Drawing.Font("Segoe UI Light", 10.0!)
-        Me.lbl_usuario.Location = New System.Drawing.Point(289, 9)
+        Me.lbl_usuario.Location = New System.Drawing.Point(351, 9)
         Me.lbl_usuario.Name = "lbl_usuario"
         Me.lbl_usuario.Size = New System.Drawing.Size(129, 19)
         Me.lbl_usuario.TabIndex = 0
@@ -53,9 +56,9 @@ Partial Class Alquiler
         Me.lbl_alquiler.Font = New System.Drawing.Font("Segoe UI Light", 20.25!)
         Me.lbl_alquiler.Location = New System.Drawing.Point(12, 9)
         Me.lbl_alquiler.Name = "lbl_alquiler"
-        Me.lbl_alquiler.Size = New System.Drawing.Size(104, 37)
+        Me.lbl_alquiler.Size = New System.Drawing.Size(122, 37)
         Me.lbl_alquiler.TabIndex = 2
-        Me.lbl_alquiler.Text = "Alquiler"
+        Me.lbl_alquiler.Text = "Alquiler -"
         '
         'grid_carro_peliculas
         '
@@ -66,48 +69,10 @@ Partial Class Alquiler
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.grid_carro_peliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grid_carro_peliculas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.titulo, Me.formato, Me.grid_pelicula_precio, Me.codigo, Me.quitar})
-        Me.grid_carro_peliculas.Location = New System.Drawing.Point(19, 88)
+        Me.grid_carro_peliculas.Location = New System.Drawing.Point(19, 98)
         Me.grid_carro_peliculas.Name = "grid_carro_peliculas"
-        Me.grid_carro_peliculas.Size = New System.Drawing.Size(393, 221)
+        Me.grid_carro_peliculas.Size = New System.Drawing.Size(458, 250)
         Me.grid_carro_peliculas.TabIndex = 23
-        '
-        'lbl_carro
-        '
-        Me.lbl_carro.AutoSize = True
-        Me.lbl_carro.Font = New System.Drawing.Font("Segoe UI Light", 16.0!)
-        Me.lbl_carro.Location = New System.Drawing.Point(14, 55)
-        Me.lbl_carro.Name = "lbl_carro"
-        Me.lbl_carro.Size = New System.Drawing.Size(178, 30)
-        Me.lbl_carro.TabIndex = 35
-        Me.lbl_carro.Text = "Carro de Peliculas"
-        '
-        'lbl_total
-        '
-        Me.lbl_total.AutoSize = True
-        Me.lbl_total.Font = New System.Drawing.Font("Segoe UI Light", 12.0!)
-        Me.lbl_total.Location = New System.Drawing.Point(289, 327)
-        Me.lbl_total.Name = "lbl_total"
-        Me.lbl_total.Size = New System.Drawing.Size(48, 21)
-        Me.lbl_total.TabIndex = 38
-        Me.lbl_total.Text = "Total: "
-        '
-        'btn_cancelar
-        '
-        Me.btn_cancelar.Image = Global.WindowsApplication1.My.Resources.Resources._112_LeftArrowLong_Blue___copia
-        Me.btn_cancelar.Location = New System.Drawing.Point(12, 365)
-        Me.btn_cancelar.Name = "btn_cancelar"
-        Me.btn_cancelar.Size = New System.Drawing.Size(40, 40)
-        Me.btn_cancelar.TabIndex = 37
-        Me.btn_cancelar.UseVisualStyleBackColor = True
-        '
-        'cmd_aceptar
-        '
-        Me.cmd_aceptar.Image = Global.WindowsApplication1.My.Resources.Resources._112_Tick_Green___copia
-        Me.cmd_aceptar.Location = New System.Drawing.Point(375, 365)
-        Me.cmd_aceptar.Name = "cmd_aceptar"
-        Me.cmd_aceptar.Size = New System.Drawing.Size(40, 40)
-        Me.cmd_aceptar.TabIndex = 36
-        Me.cmd_aceptar.UseVisualStyleBackColor = True
         '
         'titulo
         '
@@ -149,12 +114,80 @@ Partial Class Alquiler
         Me.quitar.UseColumnTextForButtonValue = True
         Me.quitar.Width = 46
         '
+        'lbl_carro
+        '
+        Me.lbl_carro.AutoSize = True
+        Me.lbl_carro.Font = New System.Drawing.Font("Segoe UI Light", 16.0!)
+        Me.lbl_carro.Location = New System.Drawing.Point(126, 15)
+        Me.lbl_carro.Name = "lbl_carro"
+        Me.lbl_carro.Size = New System.Drawing.Size(179, 30)
+        Me.lbl_carro.TabIndex = 35
+        Me.lbl_carro.Text = "Carro de Peliculas"
+        '
+        'btn_cancelar
+        '
+        Me.btn_cancelar.Image = Global.WindowsApplication1.My.Resources.Resources._112_LeftArrowLong_Blue___copia
+        Me.btn_cancelar.Location = New System.Drawing.Point(12, 394)
+        Me.btn_cancelar.Name = "btn_cancelar"
+        Me.btn_cancelar.Size = New System.Drawing.Size(40, 40)
+        Me.btn_cancelar.TabIndex = 37
+        Me.btn_cancelar.UseVisualStyleBackColor = True
+        '
+        'cmd_aceptar
+        '
+        Me.cmd_aceptar.Image = Global.WindowsApplication1.My.Resources.Resources._112_Tick_Green___copia
+        Me.cmd_aceptar.Location = New System.Drawing.Point(440, 394)
+        Me.cmd_aceptar.Name = "cmd_aceptar"
+        Me.cmd_aceptar.Size = New System.Drawing.Size(40, 40)
+        Me.cmd_aceptar.TabIndex = 36
+        Me.cmd_aceptar.UseVisualStyleBackColor = True
+        '
+        'lbl_monto_total
+        '
+        Me.lbl_monto_total.AutoSize = True
+        Me.lbl_monto_total.Font = New System.Drawing.Font("Segoe UI Light", 12.0!)
+        Me.lbl_monto_total.Location = New System.Drawing.Point(422, 361)
+        Me.lbl_monto_total.Name = "lbl_monto_total"
+        Me.lbl_monto_total.Size = New System.Drawing.Size(42, 21)
+        Me.lbl_monto_total.TabIndex = 39
+        Me.lbl_monto_total.Text = " 0,00"
+        '
+        'lbl_total
+        '
+        Me.lbl_total.AutoSize = True
+        Me.lbl_total.Font = New System.Drawing.Font("Segoe UI Light", 12.0!)
+        Me.lbl_total.Location = New System.Drawing.Point(367, 361)
+        Me.lbl_total.Name = "lbl_total"
+        Me.lbl_total.Size = New System.Drawing.Size(59, 21)
+        Me.lbl_total.TabIndex = 40
+        Me.lbl_total.Text = "Total: $"
+        '
+        'lbl_fecha_devolucion
+        '
+        Me.lbl_fecha_devolucion.AutoSize = True
+        Me.lbl_fecha_devolucion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.lbl_fecha_devolucion.Location = New System.Drawing.Point(25, 73)
+        Me.lbl_fecha_devolucion.Name = "lbl_fecha_devolucion"
+        Me.lbl_fecha_devolucion.Size = New System.Drawing.Size(109, 13)
+        Me.lbl_fecha_devolucion.TabIndex = 41
+        Me.lbl_fecha_devolucion.Text = "Fecha de Devolucion"
+        '
+        'DateTimePicker_fecha_devolucion
+        '
+        Me.DateTimePicker_fecha_devolucion.Location = New System.Drawing.Point(140, 69)
+        Me.DateTimePicker_fecha_devolucion.Name = "DateTimePicker_fecha_devolucion"
+        Me.DateTimePicker_fecha_devolucion.Size = New System.Drawing.Size(193, 21)
+        Me.DateTimePicker_fecha_devolucion.TabIndex = 42
+        '
         'Alquiler
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(427, 417)
+        Me.ClientSize = New System.Drawing.Size(492, 446)
+        Me.Controls.Add(Me.DateTimePicker_fecha_devolucion)
+        Me.Controls.Add(Me.lbl_fecha_devolucion)
         Me.Controls.Add(Me.lbl_total)
+        Me.Controls.Add(Me.lbl_monto_total)
         Me.Controls.Add(Me.btn_cancelar)
         Me.Controls.Add(Me.cmd_aceptar)
         Me.Controls.Add(Me.lbl_carro)
@@ -176,10 +209,13 @@ Partial Class Alquiler
     Friend WithEvents lbl_carro As System.Windows.Forms.Label
     Friend WithEvents cmd_aceptar As System.Windows.Forms.Button
     Friend WithEvents btn_cancelar As System.Windows.Forms.Button
+    Friend WithEvents lbl_monto_total As System.Windows.Forms.Label
     Friend WithEvents lbl_total As System.Windows.Forms.Label
     Friend WithEvents titulo As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents formato As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents grid_pelicula_precio As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents codigo As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents quitar As System.Windows.Forms.DataGridViewButtonColumn
+    Friend WithEvents lbl_fecha_devolucion As System.Windows.Forms.Label
+    Friend WithEvents DateTimePicker_fecha_devolucion As System.Windows.Forms.DateTimePicker
 End Class
