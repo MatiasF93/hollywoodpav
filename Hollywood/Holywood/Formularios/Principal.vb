@@ -1,7 +1,7 @@
 ﻿Public Class Principal
-    Enum estado
+    Enum estado_actual
         primera
-        otras
+        modificar
     End Enum
     Dim socio_actual As Socio
     Dim registrar As frm_registrar_pelicula
@@ -9,7 +9,8 @@
         ._esquema = "dbo." _
         , ._tabla = "peliculas"}
     Dim alquiler_actual As Data.DataTable
-    Dim estado_alquiler As estado = estado.primera
+    Dim estado_alquiler As estado_actual = estado_actual.primera
+    Dim numero_alquiler As Integer = -1
 
     Public Sub New(ByVal num_socio As Integer)
         Me.socio_actual = Me.obtener_socio(num_socio)
@@ -27,7 +28,7 @@
                                tabla.Rows(0)("id_tipo_documento"), tabla.Rows(0)("nro_documento"), _
                                tabla.Rows(0)("domicilio"), tabla.Rows(0)("id_tipoIVA"), tabla.Rows(0)("CUIT"), _
                                tabla.Rows(0)("limite_alquiler"), tabla.Rows(0)("telefono"), _
-                               tabla.Rows(0)("num_socio"))
+                               tabla.Rows(0)("saldo"))
         Return socio
     End Function
 
@@ -67,6 +68,9 @@
         registrar = Nothing
     End Sub
 
+    Public Sub cargar_grilla_peliculas()
+        Me.cargar_grilla_peliculas(Me.obtener_filtros)
+    End Sub
     Public Sub cargar_grilla_peliculas(ByVal filtros As String)
         Me.grid_peliculas.Rows.Clear()
         Me.grid_peliculas_usuarios.Rows.Clear()
@@ -187,6 +191,16 @@
             hay_filtros = True
         End If
 
+        If Me.socio_actual Is Nothing Then
+
+        Else
+            If hay_filtros Then
+                filtros += " AND "
+            End If
+            filtros += "fecha_alquiler IS NULL"
+            hay_filtros = True
+        End If
+
         Return filtros
     End Function
 
@@ -206,22 +220,23 @@
             '                            Me.grid_peliculas_usuarios("precio", e.RowIndex).Value, _
             '                            Me.grid_peliculas_usuarios("codigo", e.RowIndex).Value)
            
-            If Inicio.alquiler Is Nothing Then
-                Inicio.alquiler = New Alquiler(Me.alquiler_actual)
+            If Inicio.alquiler Is Nothing Or estado_alquiler = estado_actual.modificar Then
+                Inicio.alquiler = New Alquiler(Me.numero_alquiler)
                 Inicio.alquiler.Show()
-                If estado_alquiler = estado.primera Then
-                    Inicio.alquiler.tomarSocio(Me.socio_actual)
-                End If
+                Inicio.alquiler.tomarSocio(Me.socio_actual)
+                estado_alquiler = estado_actual.primera
             Else
                 Inicio.alquiler.BringToFront()
             End If
-            Inicio.alquiler.agregar_pelicula(Me.grid_peliculas_usuarios("titulo", e.RowIndex).Value, _
-                                        Me.grid_peliculas_usuarios("formato", e.RowIndex).Value, _
-                                        Me.grid_peliculas_usuarios("precio", e.RowIndex).Value, _
-                                        Me.grid_peliculas_usuarios("codigo", e.RowIndex).Value)
-
+            Inicio.alquiler.agregar_pelicula(Me.grid_peliculas_usuarios.Rows(e.RowIndex).Cells("titulo").Value, _
+                                       Me.grid_peliculas_usuarios.Rows(e.RowIndex).Cells("formato").Value, _
+                                        Me.grid_peliculas_usuarios.Rows(e.RowIndex).Cells("precio").Value, _
+                                        Me.grid_peliculas_usuarios.Rows(e.RowIndex).Cells("codigo").Value)
+            Me.grid_peliculas_usuarios.Rows.RemoveAt(grid_peliculas_usuarios.CurrentRow.Index)
         End If
+
     End Sub
+
 
     Private Sub carga_combo(ByRef combo As ComboBox, ByRef datos As Data.DataTable, ByVal pk As String, _
                         ByVal descripcion As String)
@@ -280,11 +295,42 @@
             MessageBox.Show("Debe agregar películas al carrito para poder proceder con el alquiler.", "Error", _
                             MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
-            Inicio.alquiler = New Alquiler(Me.alquiler_actual)
-            Inicio.alquiler.ShowDialog()
+            Inicio.alquiler = New Alquiler(Me.numero_alquiler)
+            Inicio.alquiler.Show()
+            Inicio.alquiler.tomarSocio(Me.socio_actual)
+            estado_alquiler = estado_actual.primera
         End If
     End Sub
 
+    Public Sub agregar_fila(ByVal codigo_pel As Integer)
+        Dim c As Integer = 0
+        Dim consulta As String
+        consulta = "SELECT nombre,fecha_estreno,generos.descripcion AS genero,formatos.descripcion AS formato,precio_alquiler, codigo_pelicula FROM ((peliculas JOIN formatos ON peliculas.id_formato = formatos.id_formato) JOIN generos ON peliculas.id_genero = generos.id_genero) WHERE codigo_pelicula =" & codigo_pel
+        Dim tabla As DataTable = Me.acceso.consultar(consulta)
+        Me.grid_peliculas_usuarios.Rows.Add(tabla.Rows(c)("nombre"), _
+                                           (tabla.Rows(c)("fecha_estreno")).ToString.Substring(0, 10), _
+                                            tabla.Rows(c)("genero"), _
+                                            tabla.Rows(c)("formato"), _
+                                            tabla.Rows(c)("precio_alquiler"), "",
+                                            tabla.Rows(c)("codigo_pelicula"))
+    End Sub
+
+    Public Sub activar_modificar()
+        Me.grid_peliculas_usuarios.Columns("DataGridViewButtonColumn1").HeaderText = "Modifcar"
+        Me.estado_alquiler = estado_actual.modificar
+    End Sub
+
+    Public Sub activar_primero()
+        Me.grid_peliculas_usuarios.Columns("DataGridViewButtonColumn1").HeaderText = "Añadir"
+        Me.estado_alquiler = estado_actual.primera
+        Me.numero_alquiler = -1
+    End Sub
+
+    Public Sub asignar_numero(ByVal num As Integer)
+        Me.numero_alquiler = num
+    End Sub
+
+    
     Private Sub cmd_sesion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmd_sesion.Click
         Dim respuesta As Integer = MessageBox.Show("¿Está seguro de que desea cerrar la sesión?", "Cerrar sesión", _
                                                    MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -306,3 +352,4 @@
     End Sub
 
 End Class
+'37873689
