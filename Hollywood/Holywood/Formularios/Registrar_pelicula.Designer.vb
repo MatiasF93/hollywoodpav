@@ -27,6 +27,11 @@ Partial Class frm_registrar_pelicula
         Me.cmd_volver = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.grid_artistas = New System.Windows.Forms.DataGridView()
+        Me.apellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Personaje = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.quitar = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.matricula_artista = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cmd_agregar = New System.Windows.Forms.Button()
         Me.cmb_director = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -47,11 +52,6 @@ Partial Class frm_registrar_pelicula
         Me.txt_precio = New WindowsApplication1.MaskedTextBox_v1()
         Me.txt_codigo = New WindowsApplication1.MaskedTextBox_v1()
         Me.txt_titulo = New WindowsApplication1.TextBox_v1()
-        Me.apellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Personaje = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.quitar = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.matricula_artista = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         CType(Me.grid_artistas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -72,7 +72,7 @@ Partial Class frm_registrar_pelicula
         Me.cmd_aceptar.Location = New System.Drawing.Point(636, 527)
         Me.cmd_aceptar.Name = "cmd_aceptar"
         Me.cmd_aceptar.Size = New System.Drawing.Size(40, 40)
-        Me.cmd_aceptar.TabIndex = 23
+        Me.cmd_aceptar.TabIndex = 6
         Me.cmd_aceptar.UseVisualStyleBackColor = True
         '
         'cmd_volver
@@ -81,7 +81,7 @@ Partial Class frm_registrar_pelicula
         Me.cmd_volver.Location = New System.Drawing.Point(10, 527)
         Me.cmd_volver.Name = "cmd_volver"
         Me.cmd_volver.Size = New System.Drawing.Size(40, 40)
-        Me.cmd_volver.TabIndex = 22
+        Me.cmd_volver.TabIndex = 7
         Me.cmd_volver.UseVisualStyleBackColor = True
         '
         'Panel1
@@ -110,201 +110,6 @@ Partial Class frm_registrar_pelicula
         Me.grid_artistas.Name = "grid_artistas"
         Me.grid_artistas.Size = New System.Drawing.Size(637, 200)
         Me.grid_artistas.TabIndex = 27
-        '
-        'cmd_agregar
-        '
-        Me.cmd_agregar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmd_agregar.Image = Global.WindowsApplication1.My.Resources.Resources._112_Plus_Green___copia
-        Me.cmd_agregar.Location = New System.Drawing.Point(616, 69)
-        Me.cmd_agregar.Name = "cmd_agregar"
-        Me.cmd_agregar.Size = New System.Drawing.Size(38, 37)
-        Me.cmd_agregar.TabIndex = 26
-        Me.cmd_agregar.UseVisualStyleBackColor = True
-        '
-        'cmb_director
-        '
-        Me.cmb_director.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmb_director.FormattingEnabled = True
-        Me.cmb_director.Location = New System.Drawing.Point(111, 51)
-        Me.cmb_director.Name = "cmb_director"
-        Me.cmb_director.Size = New System.Drawing.Size(223, 21)
-        Me.cmb_director.TabIndex = 17
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(14, 54)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(91, 13)
-        Me.Label3.TabIndex = 15
-        Me.Label3.Text = "Nombre director"
-        '
-        'cmb_actor
-        '
-        Me.cmb_actor.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmb_actor.FormattingEnabled = True
-        Me.cmb_actor.Location = New System.Drawing.Point(111, 78)
-        Me.cmb_actor.Name = "cmb_actor"
-        Me.cmb_actor.Size = New System.Drawing.Size(223, 21)
-        Me.cmb_actor.TabIndex = 17
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(29, 81)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(77, 13)
-        Me.Label2.TabIndex = 15
-        Me.Label2.Text = "Nombre actor"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Light", 15.0!)
-        Me.Label1.Location = New System.Drawing.Point(6, 6)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(245, 28)
-        Me.Label1.TabIndex = 9
-        Me.Label1.Text = "Registrar artistas en película"
-        '
-        'txt_personaje
-        '
-        Me.txt_personaje._mensaje_error = ""
-        Me.txt_personaje._validar = True
-        Me.txt_personaje.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_personaje.Location = New System.Drawing.Point(403, 77)
-        Me.txt_personaje.Name = "txt_personaje"
-        Me.txt_personaje.Size = New System.Drawing.Size(207, 22)
-        Me.txt_personaje.TabIndex = 8
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(340, 81)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(57, 13)
-        Me.Label4.TabIndex = 7
-        Me.Label4.Text = "Personaje"
-        '
-        'lbl_codigo_pelicula
-        '
-        Me.lbl_codigo_pelicula.AutoSize = True
-        Me.lbl_codigo_pelicula.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_codigo_pelicula.Location = New System.Drawing.Point(378, 60)
-        Me.lbl_codigo_pelicula.Name = "lbl_codigo_pelicula"
-        Me.lbl_codigo_pelicula.Size = New System.Drawing.Size(45, 13)
-        Me.lbl_codigo_pelicula.TabIndex = 38
-        Me.lbl_codigo_pelicula.Text = "Código"
-        '
-        'cmb_formato
-        '
-        Me.cmb_formato.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmb_formato.FormattingEnabled = True
-        Me.cmb_formato.Location = New System.Drawing.Point(429, 85)
-        Me.cmb_formato.Name = "cmb_formato"
-        Me.cmb_formato.Size = New System.Drawing.Size(146, 21)
-        Me.cmb_formato.TabIndex = 37
-        '
-        'lbl_formato
-        '
-        Me.lbl_formato.AutoSize = True
-        Me.lbl_formato.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_formato.Location = New System.Drawing.Point(373, 88)
-        Me.lbl_formato.Name = "lbl_formato"
-        Me.lbl_formato.Size = New System.Drawing.Size(50, 13)
-        Me.lbl_formato.TabIndex = 36
-        Me.lbl_formato.Text = "Formato"
-        '
-        'cmb_genero
-        '
-        Me.cmb_genero.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmb_genero.FormattingEnabled = True
-        Me.cmb_genero.Location = New System.Drawing.Point(109, 87)
-        Me.cmb_genero.Name = "cmb_genero"
-        Me.cmb_genero.Size = New System.Drawing.Size(223, 21)
-        Me.cmb_genero.TabIndex = 35
-        '
-        'lbl_genero
-        '
-        Me.lbl_genero.AutoSize = True
-        Me.lbl_genero.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_genero.Location = New System.Drawing.Point(58, 90)
-        Me.lbl_genero.Name = "lbl_genero"
-        Me.lbl_genero.Size = New System.Drawing.Size(45, 13)
-        Me.lbl_genero.TabIndex = 34
-        Me.lbl_genero.Text = "Género"
-        '
-        'dtp_fecha_estreno
-        '
-        Me.dtp_fecha_estreno.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtp_fecha_estreno.Location = New System.Drawing.Point(110, 114)
-        Me.dtp_fecha_estreno.Name = "dtp_fecha_estreno"
-        Me.dtp_fecha_estreno.Size = New System.Drawing.Size(222, 22)
-        Me.dtp_fecha_estreno.TabIndex = 33
-        Me.dtp_fecha_estreno.Value = New Date(2015, 9, 21, 21, 2, 47, 0)
-        '
-        'lbl_fecha_de_estreno
-        '
-        Me.lbl_fecha_de_estreno.AutoSize = True
-        Me.lbl_fecha_de_estreno.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_fecha_de_estreno.Location = New System.Drawing.Point(7, 121)
-        Me.lbl_fecha_de_estreno.Name = "lbl_fecha_de_estreno"
-        Me.lbl_fecha_de_estreno.Size = New System.Drawing.Size(95, 13)
-        Me.lbl_fecha_de_estreno.TabIndex = 32
-        Me.lbl_fecha_de_estreno.Text = "Fecha de estreno"
-        '
-        'lbl_precio_alquiler
-        '
-        Me.lbl_precio_alquiler.AutoSize = True
-        Me.lbl_precio_alquiler.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_precio_alquiler.Location = New System.Drawing.Point(382, 115)
-        Me.lbl_precio_alquiler.Name = "lbl_precio_alquiler"
-        Me.lbl_precio_alquiler.Size = New System.Drawing.Size(41, 13)
-        Me.lbl_precio_alquiler.TabIndex = 31
-        Me.lbl_precio_alquiler.Text = "Precio "
-        '
-        'lbl_titulo_pelicula
-        '
-        Me.lbl_titulo_pelicula.AutoSize = True
-        Me.lbl_titulo_pelicula.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_titulo_pelicula.Location = New System.Drawing.Point(67, 62)
-        Me.lbl_titulo_pelicula.Name = "lbl_titulo_pelicula"
-        Me.lbl_titulo_pelicula.Size = New System.Drawing.Size(36, 13)
-        Me.lbl_titulo_pelicula.TabIndex = 29
-        Me.lbl_titulo_pelicula.Text = "Título"
-        '
-        'txt_precio
-        '
-        Me.txt_precio._mensaje_error = "Por favor ingrese un precio."
-        Me.txt_precio._validar = True
-        Me.txt_precio.Location = New System.Drawing.Point(429, 112)
-        Me.txt_precio.Mask = "999999"
-        Me.txt_precio.Name = "txt_precio"
-        Me.txt_precio.Size = New System.Drawing.Size(146, 20)
-        Me.txt_precio.TabIndex = 42
-        '
-        'txt_codigo
-        '
-        Me.txt_codigo._mensaje_error = "Por favor ingrese un código."
-        Me.txt_codigo._validar = True
-        Me.txt_codigo.Location = New System.Drawing.Point(429, 55)
-        Me.txt_codigo.Mask = "999999"
-        Me.txt_codigo.Name = "txt_codigo"
-        Me.txt_codigo.Size = New System.Drawing.Size(146, 20)
-        Me.txt_codigo.TabIndex = 41
-        '
-        'txt_titulo
-        '
-        Me.txt_titulo._mensaje_error = "Por favor ingrese un título"
-        Me.txt_titulo._validar = True
-        Me.txt_titulo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_titulo.Location = New System.Drawing.Point(109, 59)
-        Me.txt_titulo.Name = "txt_titulo"
-        Me.txt_titulo.Size = New System.Drawing.Size(223, 22)
-        Me.txt_titulo.TabIndex = 30
         '
         'apellido
         '
@@ -347,6 +152,203 @@ Partial Class frm_registrar_pelicula
         Me.matricula_artista.Name = "matricula_artista"
         Me.matricula_artista.Visible = False
         '
+        'cmd_agregar
+        '
+        Me.cmd_agregar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmd_agregar.Image = Global.WindowsApplication1.My.Resources.Resources._112_Plus_Green___copia
+        Me.cmd_agregar.Location = New System.Drawing.Point(616, 69)
+        Me.cmd_agregar.Name = "cmd_agregar"
+        Me.cmd_agregar.Size = New System.Drawing.Size(38, 37)
+        Me.cmd_agregar.TabIndex = 3
+        Me.cmd_agregar.UseVisualStyleBackColor = True
+        '
+        'cmb_director
+        '
+        Me.cmb_director.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmb_director.FormattingEnabled = True
+        Me.cmb_director.Location = New System.Drawing.Point(111, 51)
+        Me.cmb_director.Name = "cmb_director"
+        Me.cmb_director.Size = New System.Drawing.Size(223, 21)
+        Me.cmb_director.TabIndex = 0
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(14, 54)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(91, 13)
+        Me.Label3.TabIndex = 15
+        Me.Label3.Text = "Nombre director"
+        '
+        'cmb_actor
+        '
+        Me.cmb_actor.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmb_actor.FormattingEnabled = True
+        Me.cmb_actor.Location = New System.Drawing.Point(111, 78)
+        Me.cmb_actor.Name = "cmb_actor"
+        Me.cmb_actor.Size = New System.Drawing.Size(223, 21)
+        Me.cmb_actor.TabIndex = 1
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(29, 81)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(77, 13)
+        Me.Label2.TabIndex = 15
+        Me.Label2.Text = "Nombre actor"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI Light", 15.0!)
+        Me.Label1.Location = New System.Drawing.Point(6, 6)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(245, 28)
+        Me.Label1.TabIndex = 4
+        Me.Label1.Text = "Registrar artistas en película"
+        '
+        'txt_personaje
+        '
+        Me.txt_personaje._mensaje_error = ""
+        Me.txt_personaje._validar = True
+        Me.txt_personaje.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_personaje.Location = New System.Drawing.Point(403, 77)
+        Me.txt_personaje.Name = "txt_personaje"
+        Me.txt_personaje.Size = New System.Drawing.Size(207, 22)
+        Me.txt_personaje.TabIndex = 2
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(340, 81)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(57, 13)
+        Me.Label4.TabIndex = 7
+        Me.Label4.Text = "Personaje"
+        '
+        'lbl_codigo_pelicula
+        '
+        Me.lbl_codigo_pelicula.AutoSize = True
+        Me.lbl_codigo_pelicula.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_codigo_pelicula.Location = New System.Drawing.Point(378, 62)
+        Me.lbl_codigo_pelicula.Name = "lbl_codigo_pelicula"
+        Me.lbl_codigo_pelicula.Size = New System.Drawing.Size(45, 13)
+        Me.lbl_codigo_pelicula.TabIndex = 38
+        Me.lbl_codigo_pelicula.Text = "Código"
+        '
+        'cmb_formato
+        '
+        Me.cmb_formato.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmb_formato.FormattingEnabled = True
+        Me.cmb_formato.Location = New System.Drawing.Point(429, 87)
+        Me.cmb_formato.Name = "cmb_formato"
+        Me.cmb_formato.Size = New System.Drawing.Size(146, 21)
+        Me.cmb_formato.TabIndex = 4
+        '
+        'lbl_formato
+        '
+        Me.lbl_formato.AutoSize = True
+        Me.lbl_formato.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_formato.Location = New System.Drawing.Point(373, 90)
+        Me.lbl_formato.Name = "lbl_formato"
+        Me.lbl_formato.Size = New System.Drawing.Size(50, 13)
+        Me.lbl_formato.TabIndex = 36
+        Me.lbl_formato.Text = "Formato"
+        '
+        'cmb_genero
+        '
+        Me.cmb_genero.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmb_genero.FormattingEnabled = True
+        Me.cmb_genero.Location = New System.Drawing.Point(109, 87)
+        Me.cmb_genero.Name = "cmb_genero"
+        Me.cmb_genero.Size = New System.Drawing.Size(223, 21)
+        Me.cmb_genero.TabIndex = 1
+        '
+        'lbl_genero
+        '
+        Me.lbl_genero.AutoSize = True
+        Me.lbl_genero.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_genero.Location = New System.Drawing.Point(58, 90)
+        Me.lbl_genero.Name = "lbl_genero"
+        Me.lbl_genero.Size = New System.Drawing.Size(45, 13)
+        Me.lbl_genero.TabIndex = 34
+        Me.lbl_genero.Text = "Género"
+        '
+        'dtp_fecha_estreno
+        '
+        Me.dtp_fecha_estreno.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtp_fecha_estreno.Location = New System.Drawing.Point(110, 114)
+        Me.dtp_fecha_estreno.Name = "dtp_fecha_estreno"
+        Me.dtp_fecha_estreno.Size = New System.Drawing.Size(222, 22)
+        Me.dtp_fecha_estreno.TabIndex = 2
+        Me.dtp_fecha_estreno.Value = New Date(2015, 9, 21, 21, 2, 47, 0)
+        '
+        'lbl_fecha_de_estreno
+        '
+        Me.lbl_fecha_de_estreno.AutoSize = True
+        Me.lbl_fecha_de_estreno.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_fecha_de_estreno.Location = New System.Drawing.Point(9, 117)
+        Me.lbl_fecha_de_estreno.Name = "lbl_fecha_de_estreno"
+        Me.lbl_fecha_de_estreno.Size = New System.Drawing.Size(95, 13)
+        Me.lbl_fecha_de_estreno.TabIndex = 32
+        Me.lbl_fecha_de_estreno.Text = "Fecha de estreno"
+        '
+        'lbl_precio_alquiler
+        '
+        Me.lbl_precio_alquiler.AutoSize = True
+        Me.lbl_precio_alquiler.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_precio_alquiler.Location = New System.Drawing.Point(382, 117)
+        Me.lbl_precio_alquiler.Name = "lbl_precio_alquiler"
+        Me.lbl_precio_alquiler.Size = New System.Drawing.Size(41, 13)
+        Me.lbl_precio_alquiler.TabIndex = 31
+        Me.lbl_precio_alquiler.Text = "Precio "
+        '
+        'lbl_titulo_pelicula
+        '
+        Me.lbl_titulo_pelicula.AutoSize = True
+        Me.lbl_titulo_pelicula.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_titulo_pelicula.Location = New System.Drawing.Point(67, 62)
+        Me.lbl_titulo_pelicula.Name = "lbl_titulo_pelicula"
+        Me.lbl_titulo_pelicula.Size = New System.Drawing.Size(36, 13)
+        Me.lbl_titulo_pelicula.TabIndex = 29
+        Me.lbl_titulo_pelicula.Text = "Título"
+        '
+        'txt_precio
+        '
+        Me.txt_precio._mensaje_error = "Por favor ingrese un precio."
+        Me.txt_precio._validar = True
+        Me.txt_precio.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_precio.Location = New System.Drawing.Point(429, 114)
+        Me.txt_precio.Mask = "999999"
+        Me.txt_precio.Name = "txt_precio"
+        Me.txt_precio.Size = New System.Drawing.Size(146, 22)
+        Me.txt_precio.TabIndex = 5
+        '
+        'txt_codigo
+        '
+        Me.txt_codigo._mensaje_error = "Por favor ingrese un código."
+        Me.txt_codigo._validar = True
+        Me.txt_codigo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_codigo.Location = New System.Drawing.Point(429, 59)
+        Me.txt_codigo.Mask = "999999"
+        Me.txt_codigo.Name = "txt_codigo"
+        Me.txt_codigo.Size = New System.Drawing.Size(146, 22)
+        Me.txt_codigo.TabIndex = 3
+        '
+        'txt_titulo
+        '
+        Me.txt_titulo._mensaje_error = "Por favor ingrese un título"
+        Me.txt_titulo._validar = True
+        Me.txt_titulo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_titulo.Location = New System.Drawing.Point(109, 59)
+        Me.txt_titulo.Name = "txt_titulo"
+        Me.txt_titulo.Size = New System.Drawing.Size(223, 22)
+        Me.txt_titulo.TabIndex = 0
+        '
         'frm_registrar_pelicula
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -369,7 +371,8 @@ Partial Class frm_registrar_pelicula
         Me.Controls.Add(Me.cmd_volver)
         Me.Controls.Add(Me.lbl_titulo)
         Me.Name = "frm_registrar_pelicula"
-        Me.Text = "Pelicula - Hollywood"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Registrar película - Hollywood"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.grid_artistas, System.ComponentModel.ISupportInitialize).EndInit()

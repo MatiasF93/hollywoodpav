@@ -40,7 +40,7 @@ Partial Class Recarga_saldo
         'lbl_etiqueta
         '
         Me.lbl_etiqueta.Font = New System.Drawing.Font("Segoe UI Light", 20.25!)
-        Me.lbl_etiqueta.Location = New System.Drawing.Point(37, 24)
+        Me.lbl_etiqueta.Location = New System.Drawing.Point(3, 9)
         Me.lbl_etiqueta.Name = "lbl_etiqueta"
         Me.lbl_etiqueta.Size = New System.Drawing.Size(210, 42)
         Me.lbl_etiqueta.TabIndex = 0
@@ -48,92 +48,101 @@ Partial Class Recarga_saldo
         '
         'txt_nombre
         '
-        Me.txt_nombre.Location = New System.Drawing.Point(91, 84)
+        Me.txt_nombre.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_nombre.Location = New System.Drawing.Point(91, 54)
         Me.txt_nombre.Name = "txt_nombre"
-        Me.txt_nombre.Size = New System.Drawing.Size(132, 20)
-        Me.txt_nombre.TabIndex = 1
+        Me.txt_nombre.Size = New System.Drawing.Size(132, 22)
+        Me.txt_nombre.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(41, 87)
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(40, 57)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(44, 13)
+        Me.Label1.Size = New System.Drawing.Size(48, 13)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Nombre"
         '
         'txt_apellido
         '
-        Me.txt_apellido.Location = New System.Drawing.Point(91, 110)
+        Me.txt_apellido.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_apellido.Location = New System.Drawing.Point(91, 80)
         Me.txt_apellido.Name = "txt_apellido"
-        Me.txt_apellido.Size = New System.Drawing.Size(132, 20)
+        Me.txt_apellido.Size = New System.Drawing.Size(132, 22)
         Me.txt_apellido.TabIndex = 1
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(41, 113)
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(40, 83)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(44, 13)
+        Me.Label2.Size = New System.Drawing.Size(50, 13)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Apellido"
         '
         'txt_num_socio
         '
-        Me.txt_num_socio.Location = New System.Drawing.Point(91, 136)
+        Me.txt_num_socio.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_num_socio.Location = New System.Drawing.Point(91, 106)
         Me.txt_num_socio.Name = "txt_num_socio"
-        Me.txt_num_socio.Size = New System.Drawing.Size(132, 20)
-        Me.txt_num_socio.TabIndex = 1
+        Me.txt_num_socio.Size = New System.Drawing.Size(132, 22)
+        Me.txt_num_socio.TabIndex = 2
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(17, 139)
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(10, 109)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(74, 13)
+        Me.Label3.Size = New System.Drawing.Size(79, 13)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Numero Socio"
         '
         'txt_saldo_actual
         '
-        Me.txt_saldo_actual.Location = New System.Drawing.Point(91, 162)
+        Me.txt_saldo_actual.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_saldo_actual.Location = New System.Drawing.Point(91, 132)
         Me.txt_saldo_actual.Name = "txt_saldo_actual"
-        Me.txt_saldo_actual.Size = New System.Drawing.Size(132, 20)
-        Me.txt_saldo_actual.TabIndex = 1
+        Me.txt_saldo_actual.Size = New System.Drawing.Size(132, 22)
+        Me.txt_saldo_actual.TabIndex = 3
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(17, 165)
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(17, 135)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(67, 13)
+        Me.Label4.Size = New System.Drawing.Size(71, 13)
         Me.Label4.TabIndex = 2
         Me.Label4.Text = "Saldo Actual"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(17, 191)
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(7, 161)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(77, 13)
+        Me.Label5.Size = New System.Drawing.Size(82, 13)
         Me.Label5.TabIndex = 2
         Me.Label5.Text = "Saldo a Cargar"
         '
         'cmd_cargar
         '
-        Me.cmd_cargar.Location = New System.Drawing.Point(44, 238)
+        Me.cmd_cargar.Location = New System.Drawing.Point(176, 209)
         Me.cmd_cargar.Name = "cmd_cargar"
         Me.cmd_cargar.Size = New System.Drawing.Size(75, 23)
-        Me.cmd_cargar.TabIndex = 3
+        Me.cmd_cargar.TabIndex = 5
         Me.cmd_cargar.Text = "Cargar"
         Me.cmd_cargar.UseVisualStyleBackColor = True
         '
         'cmd_cancelar
         '
-        Me.cmd_cancelar.Location = New System.Drawing.Point(148, 238)
+        Me.cmd_cancelar.Location = New System.Drawing.Point(12, 209)
         Me.cmd_cancelar.Name = "cmd_cancelar"
         Me.cmd_cancelar.Size = New System.Drawing.Size(75, 23)
-        Me.cmd_cancelar.TabIndex = 3
+        Me.cmd_cancelar.TabIndex = 6
         Me.cmd_cancelar.Text = "Cancelar"
         Me.cmd_cancelar.UseVisualStyleBackColor = True
         '
@@ -141,10 +150,11 @@ Partial Class Recarga_saldo
         '
         Me.txt_nuevo_saldo._mensaje_error = ""
         Me.txt_nuevo_saldo._validar = True
-        Me.txt_nuevo_saldo.Location = New System.Drawing.Point(91, 183)
+        Me.txt_nuevo_saldo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_nuevo_saldo.Location = New System.Drawing.Point(91, 158)
         Me.txt_nuevo_saldo.Mask = "99999"
         Me.txt_nuevo_saldo.Name = "txt_nuevo_saldo"
-        Me.txt_nuevo_saldo.Size = New System.Drawing.Size(132, 20)
+        Me.txt_nuevo_saldo.Size = New System.Drawing.Size(132, 22)
         Me.txt_nuevo_saldo.TabIndex = 4
         Me.txt_nuevo_saldo.ValidatingType = GetType(Integer)
         '
@@ -152,7 +162,7 @@ Partial Class Recarga_saldo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(281, 311)
+        Me.ClientSize = New System.Drawing.Size(263, 243)
         Me.Controls.Add(Me.txt_nuevo_saldo)
         Me.Controls.Add(Me.cmd_cancelar)
         Me.Controls.Add(Me.cmd_cargar)

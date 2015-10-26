@@ -32,13 +32,6 @@ Partial Class frm_socios
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.grid_socios = New System.Windows.Forms.DataGridView()
-        Me.txt_numero = New System.Windows.Forms.MaskedTextBox()
-        Me.txt_documento = New System.Windows.Forms.MaskedTextBox()
-        Me.cmd_volver = New System.Windows.Forms.Button()
-        Me.cmd_nuevo = New System.Windows.Forms.Button()
-        Me.cmd_buscar = New System.Windows.Forms.Button()
-        Me.txt_apellidos = New WindowsApplication1.TextBox_v1()
-        Me.txt_nombres = New WindowsApplication1.TextBox_v1()
         Me.apellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nro_socio = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -57,6 +50,13 @@ Partial Class frm_socios
         Me.recarga_saldo = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.modificar = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.eliminar = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.txt_numero = New System.Windows.Forms.MaskedTextBox()
+        Me.txt_documento = New System.Windows.Forms.MaskedTextBox()
+        Me.cmd_volver = New System.Windows.Forms.Button()
+        Me.cmd_nuevo = New System.Windows.Forms.Button()
+        Me.cmd_buscar = New System.Windows.Forms.Button()
+        Me.txt_apellidos = New WindowsApplication1.TextBox_v1()
+        Me.txt_nombres = New WindowsApplication1.TextBox_v1()
         CType(Me.grid_socios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -117,7 +117,7 @@ Partial Class frm_socios
         Me.ComboBox1.Location = New System.Drawing.Point(113, 90)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(99, 21)
-        Me.ComboBox1.TabIndex = 16
+        Me.ComboBox1.TabIndex = 3
         '
         'lbl_tipo_doc
         '
@@ -163,75 +163,6 @@ Partial Class frm_socios
         Me.grid_socios.Name = "grid_socios"
         Me.grid_socios.Size = New System.Drawing.Size(1017, 375)
         Me.grid_socios.TabIndex = 21
-        '
-        'txt_numero
-        '
-        Me.txt_numero.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_numero.Location = New System.Drawing.Point(521, 61)
-        Me.txt_numero.Mask = "999999"
-        Me.txt_numero.Name = "txt_numero"
-        Me.txt_numero.Size = New System.Drawing.Size(116, 22)
-        Me.txt_numero.TabIndex = 23
-        '
-        'txt_documento
-        '
-        Me.txt_documento.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_documento.Location = New System.Drawing.Point(319, 89)
-        Me.txt_documento.Mask = "99999999"
-        Me.txt_documento.Name = "txt_documento"
-        Me.txt_documento.Size = New System.Drawing.Size(79, 22)
-        Me.txt_documento.TabIndex = 24
-        '
-        'cmd_volver
-        '
-        Me.cmd_volver.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.cmd_volver.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.cmd_volver.Image = Global.WindowsApplication1.My.Resources.Resources._112_LeftArrowLong_Blue___copia
-        Me.cmd_volver.Location = New System.Drawing.Point(12, 521)
-        Me.cmd_volver.Name = "cmd_volver"
-        Me.cmd_volver.Size = New System.Drawing.Size(40, 40)
-        Me.cmd_volver.TabIndex = 22
-        Me.cmd_volver.UseVisualStyleBackColor = True
-        '
-        'cmd_nuevo
-        '
-        Me.cmd_nuevo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmd_nuevo.Image = Global.WindowsApplication1.My.Resources.Resources._077_AddFile___copia
-        Me.cmd_nuevo.Location = New System.Drawing.Point(760, 66)
-        Me.cmd_nuevo.Name = "cmd_nuevo"
-        Me.cmd_nuevo.Size = New System.Drawing.Size(40, 40)
-        Me.cmd_nuevo.TabIndex = 19
-        Me.cmd_nuevo.UseVisualStyleBackColor = True
-        '
-        'cmd_buscar
-        '
-        Me.cmd_buscar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmd_buscar.Image = Global.WindowsApplication1.My.Resources.Resources.search
-        Me.cmd_buscar.Location = New System.Drawing.Point(701, 66)
-        Me.cmd_buscar.Name = "cmd_buscar"
-        Me.cmd_buscar.Size = New System.Drawing.Size(40, 40)
-        Me.cmd_buscar.TabIndex = 18
-        Me.cmd_buscar.UseVisualStyleBackColor = True
-        '
-        'txt_apellidos
-        '
-        Me.txt_apellidos._mensaje_error = ""
-        Me.txt_apellidos._validar = True
-        Me.txt_apellidos.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_apellidos.Location = New System.Drawing.Point(304, 61)
-        Me.txt_apellidos.Name = "txt_apellidos"
-        Me.txt_apellidos.Size = New System.Drawing.Size(127, 22)
-        Me.txt_apellidos.TabIndex = 11
-        '
-        'txt_nombres
-        '
-        Me.txt_nombres._mensaje_error = ""
-        Me.txt_nombres._validar = True
-        Me.txt_nombres.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_nombres.Location = New System.Drawing.Point(85, 61)
-        Me.txt_nombres.Name = "txt_nombres"
-        Me.txt_nombres.Size = New System.Drawing.Size(127, 22)
-        Me.txt_nombres.TabIndex = 10
         '
         'apellido
         '
@@ -368,6 +299,75 @@ Partial Class frm_socios
         Me.eliminar.ToolTipText = "Eliminar a este actor."
         Me.eliminar.UseColumnTextForButtonValue = True
         Me.eliminar.Width = 52
+        '
+        'txt_numero
+        '
+        Me.txt_numero.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_numero.Location = New System.Drawing.Point(521, 61)
+        Me.txt_numero.Mask = "999999"
+        Me.txt_numero.Name = "txt_numero"
+        Me.txt_numero.Size = New System.Drawing.Size(116, 22)
+        Me.txt_numero.TabIndex = 2
+        '
+        'txt_documento
+        '
+        Me.txt_documento.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_documento.Location = New System.Drawing.Point(319, 89)
+        Me.txt_documento.Mask = "99999999"
+        Me.txt_documento.Name = "txt_documento"
+        Me.txt_documento.Size = New System.Drawing.Size(79, 22)
+        Me.txt_documento.TabIndex = 4
+        '
+        'cmd_volver
+        '
+        Me.cmd_volver.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.cmd_volver.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.cmd_volver.Image = Global.WindowsApplication1.My.Resources.Resources._112_LeftArrowLong_Blue___copia
+        Me.cmd_volver.Location = New System.Drawing.Point(12, 521)
+        Me.cmd_volver.Name = "cmd_volver"
+        Me.cmd_volver.Size = New System.Drawing.Size(40, 40)
+        Me.cmd_volver.TabIndex = 7
+        Me.cmd_volver.UseVisualStyleBackColor = True
+        '
+        'cmd_nuevo
+        '
+        Me.cmd_nuevo.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmd_nuevo.Image = Global.WindowsApplication1.My.Resources.Resources._077_AddFile___copia
+        Me.cmd_nuevo.Location = New System.Drawing.Point(760, 66)
+        Me.cmd_nuevo.Name = "cmd_nuevo"
+        Me.cmd_nuevo.Size = New System.Drawing.Size(40, 40)
+        Me.cmd_nuevo.TabIndex = 6
+        Me.cmd_nuevo.UseVisualStyleBackColor = True
+        '
+        'cmd_buscar
+        '
+        Me.cmd_buscar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmd_buscar.Image = Global.WindowsApplication1.My.Resources.Resources.search
+        Me.cmd_buscar.Location = New System.Drawing.Point(701, 66)
+        Me.cmd_buscar.Name = "cmd_buscar"
+        Me.cmd_buscar.Size = New System.Drawing.Size(40, 40)
+        Me.cmd_buscar.TabIndex = 5
+        Me.cmd_buscar.UseVisualStyleBackColor = True
+        '
+        'txt_apellidos
+        '
+        Me.txt_apellidos._mensaje_error = ""
+        Me.txt_apellidos._validar = True
+        Me.txt_apellidos.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_apellidos.Location = New System.Drawing.Point(304, 61)
+        Me.txt_apellidos.Name = "txt_apellidos"
+        Me.txt_apellidos.Size = New System.Drawing.Size(127, 22)
+        Me.txt_apellidos.TabIndex = 1
+        '
+        'txt_nombres
+        '
+        Me.txt_nombres._mensaje_error = ""
+        Me.txt_nombres._validar = True
+        Me.txt_nombres.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_nombres.Location = New System.Drawing.Point(85, 61)
+        Me.txt_nombres.Name = "txt_nombres"
+        Me.txt_nombres.Size = New System.Drawing.Size(127, 22)
+        Me.txt_nombres.TabIndex = 0
         '
         'frm_socios
         '

@@ -86,10 +86,16 @@
     <Compile Include="Clases\TextBox_v1.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Formularios\Alquiler.Designer.vb">
-      <DependentUpon>Alquiler.vb</DependentUpon>
+    <Compile Include="Formularios\Alquileres.Designer.vb">
+      <DependentUpon>Alquileres.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Alquiler.vb">
+    <Compile Include="Formularios\Alquileres.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Registrar_alquiler.Designer.vb">
+      <DependentUpon>Registrar_alquiler.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Registrar_alquiler.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Artistas.Designer.vb">
@@ -184,8 +190,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Formularios\Alquiler.resx">
-      <DependentUpon>Alquiler.vb</DependentUpon>
+    <EmbeddedResource Include="Formularios\Alquileres.resx">
+      <DependentUpon>Alquileres.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Registrar_alquiler.resx">
+      <DependentUpon>Registrar_alquiler.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Artistas.resx">
       <DependentUpon>Artistas.vb</DependentUpon>

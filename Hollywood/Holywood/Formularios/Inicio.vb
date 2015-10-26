@@ -2,10 +2,11 @@
     Public artistas As frm_artistas
     Public socios As frm_socios
     Public formatos As frm_formatos
-    Public alquiler As Alquiler
+    Public registrar_alquiler As Registrar_alquiler
     Public inicio As Inicio
     Public principal As Principal
-
+    Public alquileres As Alquileres
+    Public salir As Boolean = False
     Dim PF As New Procesos_Formulario
     Dim acceso As New Acceso_Datos With { _
         ._esquema = "dbo.", ._tabla = "socios"}
@@ -56,6 +57,8 @@
             Me.principal.Show()
             Me.Visible = False
         End If
+        Me.txt_documento.Clear()
+        Me.txt_contrasena.Clear()
     End Sub
 
     Private Function validar_contrasena() As Boolean
@@ -84,6 +87,12 @@
         Dim respuesta As Integer = MessageBox.Show("¿Está seguro de que desea cerrar la aplicación?", "Salir", _
                                                    MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If respuesta = DialogResult.Yes Then
+            Application.Exit()
+        End If
+    End Sub
+
+    Public Sub cerrar_aplicacion()
+        If salir Then
             Application.Exit()
         End If
     End Sub

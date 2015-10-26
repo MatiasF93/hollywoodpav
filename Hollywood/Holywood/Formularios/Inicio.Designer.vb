@@ -69,7 +69,7 @@ Partial Class Inicio
         Me.cmb_tipo_doc.Location = New System.Drawing.Point(144, 199)
         Me.cmb_tipo_doc.Name = "cmb_tipo_doc"
         Me.cmb_tipo_doc.Size = New System.Drawing.Size(155, 21)
-        Me.cmb_tipo_doc.TabIndex = 39
+        Me.cmb_tipo_doc.TabIndex = 0
         '
         'lbl_documento
         '
@@ -97,7 +97,7 @@ Partial Class Inicio
         Me.cmd_salir.Location = New System.Drawing.Point(12, 329)
         Me.cmd_salir.Name = "cmd_salir"
         Me.cmd_salir.Size = New System.Drawing.Size(40, 40)
-        Me.cmd_salir.TabIndex = 44
+        Me.cmd_salir.TabIndex = 5
         Me.cmd_salir.UseVisualStyleBackColor = True
         '
         'cmd_ingresar
@@ -106,7 +106,7 @@ Partial Class Inicio
         Me.cmd_ingresar.Location = New System.Drawing.Point(304, 329)
         Me.cmd_ingresar.Name = "cmd_ingresar"
         Me.cmd_ingresar.Size = New System.Drawing.Size(40, 40)
-        Me.cmd_ingresar.TabIndex = 45
+        Me.cmd_ingresar.TabIndex = 4
         Me.cmd_ingresar.UseVisualStyleBackColor = True
         '
         'lbl_contrasena
@@ -127,7 +127,7 @@ Partial Class Inicio
         Me.chb_admin.Location = New System.Drawing.Point(50, 271)
         Me.chb_admin.Name = "chb_admin"
         Me.chb_admin.Size = New System.Drawing.Size(174, 17)
-        Me.chb_admin.TabIndex = 49
+        Me.chb_admin.TabIndex = 2
         Me.chb_admin.Text = "Ingresar como administrador"
         Me.chb_admin.UseVisualStyleBackColor = True
         '
@@ -140,7 +140,7 @@ Partial Class Inicio
         Me.txt_contrasena.Name = "txt_contrasena"
         Me.txt_contrasena.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txt_contrasena.Size = New System.Drawing.Size(100, 22)
-        Me.txt_contrasena.TabIndex = 48
+        Me.txt_contrasena.TabIndex = 3
         Me.txt_contrasena.Visible = False
         '
         'txt_documento
@@ -152,7 +152,7 @@ Partial Class Inicio
         Me.txt_documento.Mask = "99999999"
         Me.txt_documento.Name = "txt_documento"
         Me.txt_documento.Size = New System.Drawing.Size(100, 22)
-        Me.txt_documento.TabIndex = 40
+        Me.txt_documento.TabIndex = 1
         '
         'Inicio
         '

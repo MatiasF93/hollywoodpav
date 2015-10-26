@@ -81,7 +81,7 @@ Partial Class Registrar_Artista
         Me.chb_actor.Location = New System.Drawing.Point(361, 65)
         Me.chb_actor.Name = "chb_actor"
         Me.chb_actor.Size = New System.Drawing.Size(51, 17)
-        Me.chb_actor.TabIndex = 17
+        Me.chb_actor.TabIndex = 4
         Me.chb_actor.Text = "Actor"
         Me.chb_actor.UseVisualStyleBackColor = True
         '
@@ -91,7 +91,7 @@ Partial Class Registrar_Artista
         Me.chb_director.Location = New System.Drawing.Point(361, 100)
         Me.chb_director.Name = "chb_director"
         Me.chb_director.Size = New System.Drawing.Size(63, 17)
-        Me.chb_director.TabIndex = 18
+        Me.chb_director.TabIndex = 5
         Me.chb_director.Text = "Director"
         Me.chb_director.UseVisualStyleBackColor = True
         '
@@ -109,7 +109,7 @@ Partial Class Registrar_Artista
         Me.dtp_fecha_nac.Location = New System.Drawing.Point(137, 169)
         Me.dtp_fecha_nac.Name = "dtp_fecha_nac"
         Me.dtp_fecha_nac.Size = New System.Drawing.Size(200, 20)
-        Me.dtp_fecha_nac.TabIndex = 20
+        Me.dtp_fecha_nac.TabIndex = 3
         Me.dtp_fecha_nac.Value = New Date(2015, 9, 21, 4, 35, 22, 0)
         '
         'txt_matricula
@@ -119,7 +119,7 @@ Partial Class Registrar_Artista
         Me.txt_matricula.Location = New System.Drawing.Point(137, 133)
         Me.txt_matricula.Name = "txt_matricula"
         Me.txt_matricula.Size = New System.Drawing.Size(100, 20)
-        Me.txt_matricula.TabIndex = 14
+        Me.txt_matricula.TabIndex = 2
         '
         'txt_apellidos
         '
@@ -128,7 +128,7 @@ Partial Class Registrar_Artista
         Me.txt_apellidos.Location = New System.Drawing.Point(137, 98)
         Me.txt_apellidos.Name = "txt_apellidos"
         Me.txt_apellidos.Size = New System.Drawing.Size(161, 20)
-        Me.txt_apellidos.TabIndex = 11
+        Me.txt_apellidos.TabIndex = 1
         '
         'txt_nombres
         '
@@ -137,7 +137,7 @@ Partial Class Registrar_Artista
         Me.txt_nombres.Location = New System.Drawing.Point(137, 63)
         Me.txt_nombres.Name = "txt_nombres"
         Me.txt_nombres.Size = New System.Drawing.Size(161, 20)
-        Me.txt_nombres.TabIndex = 10
+        Me.txt_nombres.TabIndex = 0
         '
         'lbl_texto_nombre
         '
@@ -153,7 +153,7 @@ Partial Class Registrar_Artista
         Me.btn_cancelar.Location = New System.Drawing.Point(12, 208)
         Me.btn_cancelar.Name = "btn_cancelar"
         Me.btn_cancelar.Size = New System.Drawing.Size(40, 40)
-        Me.btn_cancelar.TabIndex = 22
+        Me.btn_cancelar.TabIndex = 7
         Me.btn_cancelar.UseVisualStyleBackColor = True
         '
         'cmd_aceptar
@@ -162,7 +162,7 @@ Partial Class Registrar_Artista
         Me.cmd_aceptar.Location = New System.Drawing.Point(396, 208)
         Me.cmd_aceptar.Name = "cmd_aceptar"
         Me.cmd_aceptar.Size = New System.Drawing.Size(40, 40)
-        Me.cmd_aceptar.TabIndex = 21
+        Me.cmd_aceptar.TabIndex = 6
         Me.cmd_aceptar.UseVisualStyleBackColor = True
         '
         'Registrar_Artista

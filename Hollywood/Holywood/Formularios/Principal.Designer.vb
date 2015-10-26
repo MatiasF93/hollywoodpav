@@ -63,8 +63,6 @@ Partial Class Principal
         Me.grid_pelicula_codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.grid_id_genero = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.grid_id_formato = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cmd_nueva = New System.Windows.Forms.Button()
-        Me.cmd_buscar = New System.Windows.Forms.Button()
         Me.lbl_director = New System.Windows.Forms.Label()
         Me.lbl_actor = New System.Windows.Forms.Label()
         Me.cmb_genero = New System.Windows.Forms.ComboBox()
@@ -72,6 +70,10 @@ Partial Class Principal
         Me.lbl_pelicula = New System.Windows.Forms.Label()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.cmd_alquileres_admin = New System.Windows.Forms.Button()
+        Me.cmd_informes = New System.Windows.Forms.Button()
+        Me.cmd_nueva = New System.Windows.Forms.Button()
+        Me.cmd_buscar = New System.Windows.Forms.Button()
         Me.txt_director = New WindowsApplication1.TextBox_v1()
         Me.txt_actor = New WindowsApplication1.TextBox_v1()
         Me.txt_pelicula = New WindowsApplication1.TextBox_v1()
@@ -89,7 +91,7 @@ Partial Class Principal
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lbl_logo.AutoEllipsis = True
         Me.lbl_logo.Cursor = System.Windows.Forms.Cursors.Default
-        Me.lbl_logo.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_logo.Font = New System.Drawing.Font("SF Hollywood Hills", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_logo.Location = New System.Drawing.Point(24, 10)
         Me.lbl_logo.Name = "lbl_logo"
         Me.lbl_logo.Size = New System.Drawing.Size(332, 148)
@@ -111,7 +113,7 @@ Partial Class Principal
         'cmd_sesion
         '
         Me.cmd_sesion.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.cmd_sesion.Location = New System.Drawing.Point(118, 469)
+        Me.cmd_sesion.Location = New System.Drawing.Point(121, 488)
         Me.cmd_sesion.Name = "cmd_sesion"
         Me.cmd_sesion.Size = New System.Drawing.Size(131, 27)
         Me.cmd_sesion.TabIndex = 3
@@ -162,20 +164,22 @@ Partial Class Principal
         '
         'pnl_botones_admin
         '
+        Me.pnl_botones_admin.Controls.Add(Me.cmd_informes)
+        Me.pnl_botones_admin.Controls.Add(Me.cmd_alquileres_admin)
         Me.pnl_botones_admin.Controls.Add(Me.cmd_artistas)
         Me.pnl_botones_admin.Controls.Add(Me.cmd_socios)
         Me.pnl_botones_admin.Controls.Add(Me.cmd_formatos)
         Me.pnl_botones_admin.Location = New System.Drawing.Point(103, 247)
         Me.pnl_botones_admin.Name = "pnl_botones_admin"
-        Me.pnl_botones_admin.Size = New System.Drawing.Size(162, 162)
+        Me.pnl_botones_admin.Size = New System.Drawing.Size(162, 235)
         Me.pnl_botones_admin.TabIndex = 9
         '
         'cmd_artistas
         '
         Me.cmd_artistas.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.cmd_artistas.Location = New System.Drawing.Point(18, 3)
+        Me.cmd_artistas.Location = New System.Drawing.Point(18, 50)
         Me.cmd_artistas.Name = "cmd_artistas"
-        Me.cmd_artistas.Size = New System.Drawing.Size(131, 46)
+        Me.cmd_artistas.Size = New System.Drawing.Size(131, 38)
         Me.cmd_artistas.TabIndex = 4
         Me.cmd_artistas.Text = "Artistas"
         Me.cmd_artistas.UseVisualStyleBackColor = True
@@ -184,9 +188,9 @@ Partial Class Principal
         '
         Me.cmd_socios.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.cmd_socios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.cmd_socios.Location = New System.Drawing.Point(18, 55)
+        Me.cmd_socios.Location = New System.Drawing.Point(18, 182)
         Me.cmd_socios.Name = "cmd_socios"
-        Me.cmd_socios.Size = New System.Drawing.Size(131, 46)
+        Me.cmd_socios.Size = New System.Drawing.Size(131, 38)
         Me.cmd_socios.TabIndex = 5
         Me.cmd_socios.Text = "Socios"
         Me.cmd_socios.UseVisualStyleBackColor = True
@@ -194,9 +198,9 @@ Partial Class Principal
         'cmd_formatos
         '
         Me.cmd_formatos.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.cmd_formatos.Location = New System.Drawing.Point(18, 107)
+        Me.cmd_formatos.Location = New System.Drawing.Point(18, 94)
         Me.cmd_formatos.Name = "cmd_formatos"
-        Me.cmd_formatos.Size = New System.Drawing.Size(131, 46)
+        Me.cmd_formatos.Size = New System.Drawing.Size(131, 38)
         Me.cmd_formatos.TabIndex = 6
         Me.cmd_formatos.Text = "Formatos"
         Me.cmd_formatos.UseVisualStyleBackColor = True
@@ -344,7 +348,7 @@ Partial Class Principal
         Me.chb_dados_baja.Location = New System.Drawing.Point(534, 122)
         Me.chb_dados_baja.Name = "chb_dados_baja"
         Me.chb_dados_baja.Size = New System.Drawing.Size(124, 17)
-        Me.chb_dados_baja.TabIndex = 23
+        Me.chb_dados_baja.TabIndex = 4
         Me.chb_dados_baja.Text = "Incluir dados de baja"
         Me.chb_dados_baja.UseVisualStyleBackColor = True
         '
@@ -467,24 +471,6 @@ Partial Class Principal
         Me.grid_id_formato.Name = "grid_id_formato"
         Me.grid_id_formato.Visible = False
         '
-        'cmd_nueva
-        '
-        Me.cmd_nueva.Image = Global.WindowsApplication1.My.Resources.Resources._077_AddFile___copia
-        Me.cmd_nueva.Location = New System.Drawing.Point(589, 67)
-        Me.cmd_nueva.Name = "cmd_nueva"
-        Me.cmd_nueva.Size = New System.Drawing.Size(40, 40)
-        Me.cmd_nueva.TabIndex = 20
-        Me.cmd_nueva.UseVisualStyleBackColor = True
-        '
-        'cmd_buscar
-        '
-        Me.cmd_buscar.Image = Global.WindowsApplication1.My.Resources.Resources.search
-        Me.cmd_buscar.Location = New System.Drawing.Point(534, 67)
-        Me.cmd_buscar.Name = "cmd_buscar"
-        Me.cmd_buscar.Size = New System.Drawing.Size(40, 40)
-        Me.cmd_buscar.TabIndex = 14
-        Me.cmd_buscar.UseVisualStyleBackColor = True
-        '
         'lbl_director
         '
         Me.lbl_director.AutoSize = True
@@ -509,7 +495,7 @@ Partial Class Principal
         Me.cmb_genero.Location = New System.Drawing.Point(95, 98)
         Me.cmb_genero.Name = "cmb_genero"
         Me.cmb_genero.Size = New System.Drawing.Size(167, 21)
-        Me.cmb_genero.TabIndex = 9
+        Me.cmb_genero.TabIndex = 2
         '
         'lbl_genero
         '
@@ -550,6 +536,42 @@ Partial Class Principal
         Me.LineShape1.Y1 = 144
         Me.LineShape1.Y2 = 144
         '
+        'cmd_alquileres_admin
+        '
+        Me.cmd_alquileres_admin.Location = New System.Drawing.Point(18, 6)
+        Me.cmd_alquileres_admin.Name = "cmd_alquileres_admin"
+        Me.cmd_alquileres_admin.Size = New System.Drawing.Size(131, 38)
+        Me.cmd_alquileres_admin.TabIndex = 13
+        Me.cmd_alquileres_admin.Text = "Alquileres"
+        Me.cmd_alquileres_admin.UseVisualStyleBackColor = True
+        '
+        'cmd_informes
+        '
+        Me.cmd_informes.Location = New System.Drawing.Point(18, 138)
+        Me.cmd_informes.Name = "cmd_informes"
+        Me.cmd_informes.Size = New System.Drawing.Size(131, 38)
+        Me.cmd_informes.TabIndex = 14
+        Me.cmd_informes.Text = "Informes"
+        Me.cmd_informes.UseVisualStyleBackColor = True
+        '
+        'cmd_nueva
+        '
+        Me.cmd_nueva.Image = Global.WindowsApplication1.My.Resources.Resources._077_AddFile___copia
+        Me.cmd_nueva.Location = New System.Drawing.Point(589, 67)
+        Me.cmd_nueva.Name = "cmd_nueva"
+        Me.cmd_nueva.Size = New System.Drawing.Size(40, 40)
+        Me.cmd_nueva.TabIndex = 20
+        Me.cmd_nueva.UseVisualStyleBackColor = True
+        '
+        'cmd_buscar
+        '
+        Me.cmd_buscar.Image = Global.WindowsApplication1.My.Resources.Resources.search
+        Me.cmd_buscar.Location = New System.Drawing.Point(534, 67)
+        Me.cmd_buscar.Name = "cmd_buscar"
+        Me.cmd_buscar.Size = New System.Drawing.Size(40, 40)
+        Me.cmd_buscar.TabIndex = 5
+        Me.cmd_buscar.UseVisualStyleBackColor = True
+        '
         'txt_director
         '
         Me.txt_director._mensaje_error = ""
@@ -557,7 +579,7 @@ Partial Class Principal
         Me.txt_director.Location = New System.Drawing.Point(352, 98)
         Me.txt_director.Name = "txt_director"
         Me.txt_director.Size = New System.Drawing.Size(164, 20)
-        Me.txt_director.TabIndex = 17
+        Me.txt_director.TabIndex = 3
         '
         'txt_actor
         '
@@ -566,7 +588,7 @@ Partial Class Principal
         Me.txt_actor.Location = New System.Drawing.Point(352, 64)
         Me.txt_actor.Name = "txt_actor"
         Me.txt_actor.Size = New System.Drawing.Size(164, 20)
-        Me.txt_actor.TabIndex = 16
+        Me.txt_actor.TabIndex = 1
         '
         'txt_pelicula
         '
@@ -575,7 +597,7 @@ Partial Class Principal
         Me.txt_pelicula.Location = New System.Drawing.Point(95, 64)
         Me.txt_pelicula.Name = "txt_pelicula"
         Me.txt_pelicula.Size = New System.Drawing.Size(167, 20)
-        Me.txt_pelicula.TabIndex = 15
+        Me.txt_pelicula.TabIndex = 0
         '
         'Principal
         '
@@ -644,5 +666,7 @@ Partial Class Principal
     Friend WithEvents precio As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewButtonColumn1 As System.Windows.Forms.DataGridViewButtonColumn
     Friend WithEvents codigo As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents cmd_informes As System.Windows.Forms.Button
+    Friend WithEvents cmd_alquileres_admin As System.Windows.Forms.Button
 
 End Class

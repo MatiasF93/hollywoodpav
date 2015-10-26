@@ -3,7 +3,6 @@
         primera
         modificar
     End Enum
-    Dim socio_actual As Socio
     Dim registrar As frm_registrar_pelicula
     Dim acceso As New Acceso_Datos With { _
         ._esquema = "dbo." _
@@ -11,6 +10,7 @@
     Dim alquiler_actual As Data.DataTable
     Dim estado_alquiler As estado_actual = estado_actual.primera
     Dim numero_alquiler As Integer = -1
+    Public socio_actual As Socio
 
     Public Sub New(ByVal num_socio As Integer)
         Me.socio_actual = Me.obtener_socio(num_socio)
@@ -219,16 +219,16 @@
             '                            Me.grid_peliculas_usuarios("formato", e.RowIndex).Value, _
             '                            Me.grid_peliculas_usuarios("precio", e.RowIndex).Value, _
             '                            Me.grid_peliculas_usuarios("codigo", e.RowIndex).Value)
-           
-            If Inicio.alquiler Is Nothing Or estado_alquiler = estado_actual.modificar Then
-                Inicio.alquiler = New Alquiler(Me.numero_alquiler)
-                Inicio.alquiler.Show()
-                Inicio.alquiler.tomarSocio(Me.socio_actual)
+
+            If Inicio.registrar_alquiler Is Nothing Or estado_alquiler = estado_actual.modificar Then
+                Inicio.registrar_alquiler = New Registrar_alquiler(Me.numero_alquiler)
+                Inicio.registrar_alquiler.Show()
+                Inicio.registrar_alquiler.tomarSocio(Me.socio_actual)
                 estado_alquiler = estado_actual.primera
             Else
-                Inicio.alquiler.BringToFront()
+                Inicio.registrar_alquiler.BringToFront()
             End If
-            Inicio.alquiler.agregar_pelicula(Me.grid_peliculas_usuarios.Rows(e.RowIndex).Cells("titulo").Value, _
+            Inicio.registrar_alquiler.agregar_pelicula(Me.grid_peliculas_usuarios.Rows(e.RowIndex).Cells("titulo").Value, _
                                        Me.grid_peliculas_usuarios.Rows(e.RowIndex).Cells("formato").Value, _
                                         Me.grid_peliculas_usuarios.Rows(e.RowIndex).Cells("precio").Value, _
                                         Me.grid_peliculas_usuarios.Rows(e.RowIndex).Cells("codigo").Value)
@@ -295,9 +295,9 @@
             MessageBox.Show("Debe agregar películas al carrito para poder proceder con el alquiler.", "Error", _
                             MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
-            Inicio.alquiler = New Alquiler(Me.numero_alquiler)
-            Inicio.alquiler.Show()
-            Inicio.alquiler.tomarSocio(Me.socio_actual)
+            Inicio.registrar_alquiler = New Registrar_alquiler(Me.numero_alquiler)
+            Inicio.registrar_alquiler.Show()
+            Inicio.registrar_alquiler.tomarSocio(Me.socio_actual)
             estado_alquiler = estado_actual.primera
         End If
     End Sub
@@ -330,12 +330,13 @@
         Me.numero_alquiler = num
     End Sub
 
-    
+
     Private Sub cmd_sesion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmd_sesion.Click
         Dim respuesta As Integer = MessageBox.Show("¿Está seguro de que desea cerrar la sesión?", "Cerrar sesión", _
                                                    MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If respuesta = DialogResult.Yes Then
-            inicio.Visible = True
+            Inicio.salir = False
+            Inicio.Visible = True
             Me.Visible = False
         End If
     End Sub
@@ -351,5 +352,13 @@
         End If
     End Sub
 
+    Private Sub Principal_FormClosed(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles MyBase.FormClosed
+        Inicio.cerrar_aplicacion()
+    End Sub
+
+    Private Sub cmd_alquileres_admin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmd_alquileres_admin.Click
+        Inicio.alquileres = New Alquileres()
+        Inicio.alquileres.ShowDialog()
+        Inicio.alquileres = Nothing
+    End Sub
 End Class
-'37873689

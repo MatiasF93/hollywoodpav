@@ -92,7 +92,7 @@ Partial Class Listado_autorizadosXsocio
         Me.btn_cancelar.Location = New System.Drawing.Point(12, 306)
         Me.btn_cancelar.Name = "btn_cancelar"
         Me.btn_cancelar.Size = New System.Drawing.Size(40, 40)
-        Me.btn_cancelar.TabIndex = 27
+        Me.btn_cancelar.TabIndex = 3
         Me.btn_cancelar.UseVisualStyleBackColor = True
         '
         'reporte_autorizadosXsocio
@@ -104,7 +104,7 @@ Partial Class Listado_autorizadosXsocio
         Me.reporte_autorizadosXsocio.Location = New System.Drawing.Point(12, 40)
         Me.reporte_autorizadosXsocio.Name = "reporte_autorizadosXsocio"
         Me.reporte_autorizadosXsocio.Size = New System.Drawing.Size(714, 260)
-        Me.reporte_autorizadosXsocio.TabIndex = 28
+        Me.reporte_autorizadosXsocio.TabIndex = 4
         '
         'lbl_documento
         '
@@ -122,7 +122,7 @@ Partial Class Listado_autorizadosXsocio
         Me.cmd_buscar.Location = New System.Drawing.Point(499, 305)
         Me.cmd_buscar.Name = "cmd_buscar"
         Me.cmd_buscar.Size = New System.Drawing.Size(40, 40)
-        Me.cmd_buscar.TabIndex = 31
+        Me.cmd_buscar.TabIndex = 1
         Me.cmd_buscar.UseVisualStyleBackColor = True
         '
         'txt_documento
@@ -132,7 +132,7 @@ Partial Class Listado_autorizadosXsocio
         Me.txt_documento.Location = New System.Drawing.Point(393, 317)
         Me.txt_documento.Name = "txt_documento"
         Me.txt_documento.Size = New System.Drawing.Size(100, 20)
-        Me.txt_documento.TabIndex = 30
+        Me.txt_documento.TabIndex = 0
         '
         'Listado_autorizadosXsocio
         '
