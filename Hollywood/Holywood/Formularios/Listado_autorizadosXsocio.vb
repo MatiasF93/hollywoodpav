@@ -27,4 +27,7 @@
         Me.Close()
     End Sub
 
+    Private Sub reporte_autorizadosXsocio_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles reporte_autorizadosXsocio.Load
+
+    End Sub
 End Class

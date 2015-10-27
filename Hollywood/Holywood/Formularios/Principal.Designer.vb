@@ -36,6 +36,8 @@ Partial Class Principal
         Me.cmd_alquileres = New System.Windows.Forms.Button()
         Me.cmd_autorizados = New System.Windows.Forms.Button()
         Me.pnl_botones_admin = New System.Windows.Forms.Panel()
+        Me.cmd_informes = New System.Windows.Forms.Button()
+        Me.cmd_alquileres_admin = New System.Windows.Forms.Button()
         Me.cmd_artistas = New System.Windows.Forms.Button()
         Me.cmd_socios = New System.Windows.Forms.Button()
         Me.cmd_formatos = New System.Windows.Forms.Button()
@@ -63,6 +65,8 @@ Partial Class Principal
         Me.grid_pelicula_codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.grid_id_genero = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.grid_id_formato = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cmd_nueva = New System.Windows.Forms.Button()
+        Me.cmd_buscar = New System.Windows.Forms.Button()
         Me.lbl_director = New System.Windows.Forms.Label()
         Me.lbl_actor = New System.Windows.Forms.Label()
         Me.cmb_genero = New System.Windows.Forms.ComboBox()
@@ -70,10 +74,6 @@ Partial Class Principal
         Me.lbl_pelicula = New System.Windows.Forms.Label()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.cmd_alquileres_admin = New System.Windows.Forms.Button()
-        Me.cmd_informes = New System.Windows.Forms.Button()
-        Me.cmd_nueva = New System.Windows.Forms.Button()
-        Me.cmd_buscar = New System.Windows.Forms.Button()
         Me.txt_director = New WindowsApplication1.TextBox_v1()
         Me.txt_actor = New WindowsApplication1.TextBox_v1()
         Me.txt_pelicula = New WindowsApplication1.TextBox_v1()
@@ -91,7 +91,7 @@ Partial Class Principal
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lbl_logo.AutoEllipsis = True
         Me.lbl_logo.Cursor = System.Windows.Forms.Cursors.Default
-        Me.lbl_logo.Font = New System.Drawing.Font("SF Hollywood Hills", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_logo.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_logo.Location = New System.Drawing.Point(24, 10)
         Me.lbl_logo.Name = "lbl_logo"
         Me.lbl_logo.Size = New System.Drawing.Size(332, 148)
@@ -173,6 +173,24 @@ Partial Class Principal
         Me.pnl_botones_admin.Name = "pnl_botones_admin"
         Me.pnl_botones_admin.Size = New System.Drawing.Size(162, 235)
         Me.pnl_botones_admin.TabIndex = 9
+        '
+        'cmd_informes
+        '
+        Me.cmd_informes.Location = New System.Drawing.Point(18, 138)
+        Me.cmd_informes.Name = "cmd_informes"
+        Me.cmd_informes.Size = New System.Drawing.Size(131, 38)
+        Me.cmd_informes.TabIndex = 14
+        Me.cmd_informes.Text = "Informes"
+        Me.cmd_informes.UseVisualStyleBackColor = True
+        '
+        'cmd_alquileres_admin
+        '
+        Me.cmd_alquileres_admin.Location = New System.Drawing.Point(18, 6)
+        Me.cmd_alquileres_admin.Name = "cmd_alquileres_admin"
+        Me.cmd_alquileres_admin.Size = New System.Drawing.Size(131, 38)
+        Me.cmd_alquileres_admin.TabIndex = 13
+        Me.cmd_alquileres_admin.Text = "Alquileres"
+        Me.cmd_alquileres_admin.UseVisualStyleBackColor = True
         '
         'cmd_artistas
         '
@@ -471,6 +489,24 @@ Partial Class Principal
         Me.grid_id_formato.Name = "grid_id_formato"
         Me.grid_id_formato.Visible = False
         '
+        'cmd_nueva
+        '
+        Me.cmd_nueva.Image = Global.WindowsApplication1.My.Resources.Resources._077_AddFile___copia
+        Me.cmd_nueva.Location = New System.Drawing.Point(589, 67)
+        Me.cmd_nueva.Name = "cmd_nueva"
+        Me.cmd_nueva.Size = New System.Drawing.Size(40, 40)
+        Me.cmd_nueva.TabIndex = 20
+        Me.cmd_nueva.UseVisualStyleBackColor = True
+        '
+        'cmd_buscar
+        '
+        Me.cmd_buscar.Image = Global.WindowsApplication1.My.Resources.Resources.search
+        Me.cmd_buscar.Location = New System.Drawing.Point(534, 67)
+        Me.cmd_buscar.Name = "cmd_buscar"
+        Me.cmd_buscar.Size = New System.Drawing.Size(40, 40)
+        Me.cmd_buscar.TabIndex = 5
+        Me.cmd_buscar.UseVisualStyleBackColor = True
+        '
         'lbl_director
         '
         Me.lbl_director.AutoSize = True
@@ -535,42 +571,6 @@ Partial Class Principal
         Me.LineShape1.X2 = 749
         Me.LineShape1.Y1 = 144
         Me.LineShape1.Y2 = 144
-        '
-        'cmd_alquileres_admin
-        '
-        Me.cmd_alquileres_admin.Location = New System.Drawing.Point(18, 6)
-        Me.cmd_alquileres_admin.Name = "cmd_alquileres_admin"
-        Me.cmd_alquileres_admin.Size = New System.Drawing.Size(131, 38)
-        Me.cmd_alquileres_admin.TabIndex = 13
-        Me.cmd_alquileres_admin.Text = "Alquileres"
-        Me.cmd_alquileres_admin.UseVisualStyleBackColor = True
-        '
-        'cmd_informes
-        '
-        Me.cmd_informes.Location = New System.Drawing.Point(18, 138)
-        Me.cmd_informes.Name = "cmd_informes"
-        Me.cmd_informes.Size = New System.Drawing.Size(131, 38)
-        Me.cmd_informes.TabIndex = 14
-        Me.cmd_informes.Text = "Informes"
-        Me.cmd_informes.UseVisualStyleBackColor = True
-        '
-        'cmd_nueva
-        '
-        Me.cmd_nueva.Image = Global.WindowsApplication1.My.Resources.Resources._077_AddFile___copia
-        Me.cmd_nueva.Location = New System.Drawing.Point(589, 67)
-        Me.cmd_nueva.Name = "cmd_nueva"
-        Me.cmd_nueva.Size = New System.Drawing.Size(40, 40)
-        Me.cmd_nueva.TabIndex = 20
-        Me.cmd_nueva.UseVisualStyleBackColor = True
-        '
-        'cmd_buscar
-        '
-        Me.cmd_buscar.Image = Global.WindowsApplication1.My.Resources.Resources.search
-        Me.cmd_buscar.Location = New System.Drawing.Point(534, 67)
-        Me.cmd_buscar.Name = "cmd_buscar"
-        Me.cmd_buscar.Size = New System.Drawing.Size(40, 40)
-        Me.cmd_buscar.TabIndex = 5
-        Me.cmd_buscar.UseVisualStyleBackColor = True
         '
         'txt_director
         '

@@ -3,7 +3,7 @@
     Dim acceso As New Acceso_Datos With { _
         ._esquema = "dbo." _
         , ._tabla = "artistas"}
-
+    Dim listado As Listado_peliculasXartista
     Private Sub artistas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.cargar_grilla(obtener_filtros())
     End Sub

@@ -10,6 +10,7 @@
     Dim alquiler_actual As Data.DataTable
     Dim estado_alquiler As estado_actual = estado_actual.primera
     Dim numero_alquiler As Integer = -1
+    Dim informes As Informes
     Public socio_actual As Socio
 
     Public Sub New(ByVal num_socio As Integer)
@@ -361,5 +362,12 @@
         Inicio.alquileres = New Alquileres()
         Inicio.alquileres.ShowDialog()
         Inicio.alquileres = Nothing
+    End Sub
+
+    Private Sub cmd_informes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmd_informes.Click
+        informes = New Informes()
+        informes.ShowDialog()
+        informes = Nothing
+
     End Sub
 End Class

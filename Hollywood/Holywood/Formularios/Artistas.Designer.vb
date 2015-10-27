@@ -26,14 +26,6 @@ Partial Class frm_artistas
         Me.lbl_nombres = New System.Windows.Forms.Label()
         Me.lbl_Apellidos = New System.Windows.Forms.Label()
         Me.grid_artistas = New System.Windows.Forms.DataGridView()
-        Me.cmd_volver = New System.Windows.Forms.Button()
-        Me.chb_actor = New System.Windows.Forms.CheckBox()
-        Me.chb_director = New System.Windows.Forms.CheckBox()
-        Me.cmd_nuevo = New System.Windows.Forms.Button()
-        Me.cmd_buscar = New System.Windows.Forms.Button()
-        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
-        Me.chb_dados_baja = New System.Windows.Forms.CheckBox()
         Me.apellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.matricula = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -43,6 +35,14 @@ Partial Class frm_artistas
         Me.fecha_baja = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.modificar = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.eliminar = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.cmd_volver = New System.Windows.Forms.Button()
+        Me.chb_actor = New System.Windows.Forms.CheckBox()
+        Me.chb_director = New System.Windows.Forms.CheckBox()
+        Me.cmd_nuevo = New System.Windows.Forms.Button()
+        Me.cmd_buscar = New System.Windows.Forms.Button()
+        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.chb_dados_baja = New System.Windows.Forms.CheckBox()
         Me.txt_apellidos = New WindowsApplication1.TextBox_v1()
         Me.txt_nombres = New WindowsApplication1.TextBox_v1()
         CType(Me.grid_artistas, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -54,7 +54,7 @@ Partial Class frm_artistas
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Light", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(99, 37)
+        Me.Label1.Size = New System.Drawing.Size(98, 37)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Artistas"
         '
@@ -88,6 +88,84 @@ Partial Class frm_artistas
         Me.grid_artistas.Name = "grid_artistas"
         Me.grid_artistas.Size = New System.Drawing.Size(657, 224)
         Me.grid_artistas.TabIndex = 5
+        '
+        'apellido
+        '
+        Me.apellido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.apellido.HeaderText = "Apellido"
+        Me.apellido.Name = "apellido"
+        Me.apellido.ReadOnly = True
+        Me.apellido.Width = 120
+        '
+        'nombre
+        '
+        Me.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.nombre.HeaderText = "Nombre"
+        Me.nombre.Name = "nombre"
+        Me.nombre.ReadOnly = True
+        Me.nombre.Width = 120
+        '
+        'matricula
+        '
+        Me.matricula.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.matricula.HeaderText = "Matrícula"
+        Me.matricula.Name = "matricula"
+        Me.matricula.ReadOnly = True
+        Me.matricula.Width = 60
+        '
+        'es_actor
+        '
+        Me.es_actor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.es_actor.HeaderText = "Es actor"
+        Me.es_actor.Name = "es_actor"
+        Me.es_actor.ReadOnly = True
+        Me.es_actor.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.es_actor.Width = 50
+        '
+        'es_director
+        '
+        Me.es_director.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.es_director.HeaderText = "Es director"
+        Me.es_director.Name = "es_director"
+        Me.es_director.ReadOnly = True
+        Me.es_director.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.es_director.Width = 50
+        '
+        'fecha_nac
+        '
+        Me.fecha_nac.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader
+        Me.fecha_nac.HeaderText = "Fecha de nacimiento"
+        Me.fecha_nac.MinimumWidth = 20
+        Me.fecha_nac.Name = "fecha_nac"
+        Me.fecha_nac.ReadOnly = True
+        Me.fecha_nac.Width = 20
+        '
+        'fecha_baja
+        '
+        Me.fecha_baja.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.fecha_baja.HeaderText = "Fecha de baja"
+        Me.fecha_baja.Name = "fecha_baja"
+        Me.fecha_baja.Visible = False
+        '
+        'modificar
+        '
+        Me.modificar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.modificar.HeaderText = "Modificar"
+        Me.modificar.Name = "modificar"
+        Me.modificar.Text = "Modificar"
+        Me.modificar.ToolTipText = "Modificar los datos de este actor."
+        Me.modificar.UseColumnTextForButtonValue = True
+        Me.modificar.Width = 62
+        '
+        'eliminar
+        '
+        Me.eliminar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.eliminar.HeaderText = "Eliminar "
+        Me.eliminar.Name = "eliminar"
+        Me.eliminar.Text = "Eliminar "
+        Me.eliminar.ToolTipText = "Eliminar a este actor."
+        Me.eliminar.UseColumnTextForButtonValue = True
+        Me.eliminar.Width = 57
         '
         'cmd_volver
         '
@@ -168,85 +246,6 @@ Partial Class frm_artistas
         Me.chb_dados_baja.TabIndex = 14
         Me.chb_dados_baja.Text = "Incluir dados de baja"
         Me.chb_dados_baja.UseVisualStyleBackColor = True
-        '
-        'apellido
-        '
-        Me.apellido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.apellido.HeaderText = "Apellido"
-        Me.apellido.Name = "apellido"
-        Me.apellido.ReadOnly = True
-        Me.apellido.Width = 120
-        '
-        'nombre
-        '
-        Me.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.nombre.HeaderText = "Nombre"
-        Me.nombre.Name = "nombre"
-        Me.nombre.ReadOnly = True
-        Me.nombre.Width = 120
-        '
-        'matricula
-        '
-        Me.matricula.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.matricula.HeaderText = "Matrícula"
-        Me.matricula.Name = "matricula"
-        Me.matricula.ReadOnly = True
-        Me.matricula.Width = 60
-        '
-        'es_actor
-        '
-        Me.es_actor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.es_actor.HeaderText = "Es actor"
-        Me.es_actor.Name = "es_actor"
-        Me.es_actor.ReadOnly = True
-        Me.es_actor.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.es_actor.Width = 50
-        '
-        'es_director
-        '
-        Me.es_director.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.es_director.HeaderText = "Es director"
-        Me.es_director.Name = "es_director"
-        Me.es_director.ReadOnly = True
-        Me.es_director.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.es_director.Width = 50
-        '
-        'fecha_nac
-        '
-        Me.fecha_nac.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader
-        Me.fecha_nac.HeaderText = "Fecha de nacimiento"
-        Me.fecha_nac.MinimumWidth = 20
-        Me.fecha_nac.Name = "fecha_nac"
-        Me.fecha_nac.ReadOnly = True
-        Me.fecha_nac.Width = 20
-        '
-        'fecha_baja
-        '
-        Me.fecha_baja.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
-        Me.fecha_baja.HeaderText = "Fecha de baja"
-        Me.fecha_baja.Name = "fecha_baja"
-        Me.fecha_baja.Visible = False
-        Me.fecha_baja.Width = 74
-        '
-        'modificar
-        '
-        Me.modificar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
-        Me.modificar.HeaderText = "Modificar"
-        Me.modificar.Name = "modificar"
-        Me.modificar.Text = "Modificar"
-        Me.modificar.ToolTipText = "Modificar los datos de este actor."
-        Me.modificar.UseColumnTextForButtonValue = True
-        Me.modificar.Width = 62
-        '
-        'eliminar
-        '
-        Me.eliminar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
-        Me.eliminar.HeaderText = "Eliminar "
-        Me.eliminar.Name = "eliminar"
-        Me.eliminar.Text = "Eliminar "
-        Me.eliminar.ToolTipText = "Eliminar a este actor."
-        Me.eliminar.UseColumnTextForButtonValue = True
-        Me.eliminar.Width = 57
         '
         'txt_apellidos
         '

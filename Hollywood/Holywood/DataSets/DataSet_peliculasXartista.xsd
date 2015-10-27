@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_peliculasXartista" targetNamespace="http://tempuri.org/DataSet_peliculasXartista.xsd" xmlns:mstns="http://tempuri.org/DataSet_peliculasXartista.xsd" xmlns="http://tempuri.org/DataSet_peliculasXartista.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_peliculasXartista" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet_peliculasXartista" msprop:Generator_UserDSName="DataSet_peliculasXartista">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="peliculas_x_artista" msprop:Generator_TableClassName="peliculas_x_artistaDataTable" msprop:Generator_TableVarName="tablepeliculas_x_artista" msprop:Generator_TablePropName="peliculas_x_artista" msprop:Generator_RowDeletingName="peliculas_x_artistaRowDeleting" msprop:Generator_RowChangingName="peliculas_x_artistaRowChanging" msprop:Generator_RowEvHandlerName="peliculas_x_artistaRowChangeEventHandler" msprop:Generator_RowDeletedName="peliculas_x_artistaRowDeleted" msprop:Generator_UserTableName="peliculas_x_artista" msprop:Generator_RowChangedName="peliculas_x_artistaRowChanged" msprop:Generator_RowEvArgName="peliculas_x_artistaRowChangeEvent" msprop:Generator_RowClassName="peliculas_x_artistaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombre_artista" msprop:Generator_ColumnVarNameInTable="columnnombre_artista" msprop:Generator_ColumnPropNameInRow="nombre_artista" msprop:Generator_ColumnPropNameInTable="nombre_artistaColumn" msprop:Generator_UserColumnName="nombre_artista" type="xs:string" minOccurs="0" />
+              <xs:element name="nombre_pelicula" msprop:Generator_ColumnVarNameInTable="columnnombre_pelicula" msprop:Generator_ColumnPropNameInRow="nombre_pelicula" msprop:Generator_ColumnPropNameInTable="nombre_peliculaColumn" msprop:Generator_UserColumnName="nombre_pelicula" type="xs:string" minOccurs="0" />
+              <xs:element name="personaje" msprop:Generator_ColumnVarNameInTable="columnpersonaje" msprop:Generator_ColumnPropNameInRow="personaje" msprop:Generator_ColumnPropNameInTable="personajeColumn" msprop:Generator_UserColumnName="personaje" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
