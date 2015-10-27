@@ -25,9 +25,9 @@ Partial Class Informes
         Me.cmd_pelixartista = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btn_cancelar = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.cmd_devolucionatrasada = New System.Windows.Forms.Button()
+        Me.cmd_alquilerxgenero = New System.Windows.Forms.Button()
+        Me.cmd_alquilerxsocio = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'cmd_pelixartista
@@ -57,41 +57,41 @@ Partial Class Informes
         Me.btn_cancelar.TabIndex = 3
         Me.btn_cancelar.UseVisualStyleBackColor = True
         '
-        'Button1
+        'cmd_devolucionatrasada
         '
-        Me.Button1.Location = New System.Drawing.Point(48, 184)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(164, 38)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Devoluciones atrasadas"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.cmd_devolucionatrasada.Location = New System.Drawing.Point(48, 184)
+        Me.cmd_devolucionatrasada.Name = "cmd_devolucionatrasada"
+        Me.cmd_devolucionatrasada.Size = New System.Drawing.Size(164, 38)
+        Me.cmd_devolucionatrasada.TabIndex = 4
+        Me.cmd_devolucionatrasada.Text = "Devoluciones atrasadas"
+        Me.cmd_devolucionatrasada.UseVisualStyleBackColor = True
         '
-        'Button2
+        'cmd_alquilerxgenero
         '
-        Me.Button2.Location = New System.Drawing.Point(48, 96)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(164, 38)
-        Me.Button2.TabIndex = 5
-        Me.Button2.Text = "Alquileres por género"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.cmd_alquilerxgenero.Location = New System.Drawing.Point(48, 96)
+        Me.cmd_alquilerxgenero.Name = "cmd_alquilerxgenero"
+        Me.cmd_alquilerxgenero.Size = New System.Drawing.Size(164, 38)
+        Me.cmd_alquilerxgenero.TabIndex = 5
+        Me.cmd_alquilerxgenero.Text = "Alquileres por género"
+        Me.cmd_alquilerxgenero.UseVisualStyleBackColor = True
         '
-        'Button3
+        'cmd_alquilerxsocio
         '
-        Me.Button3.Location = New System.Drawing.Point(48, 140)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(164, 38)
-        Me.Button3.TabIndex = 6
-        Me.Button3.Text = "Alquileres por socio"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.cmd_alquilerxsocio.Location = New System.Drawing.Point(48, 140)
+        Me.cmd_alquilerxsocio.Name = "cmd_alquilerxsocio"
+        Me.cmd_alquilerxsocio.Size = New System.Drawing.Size(164, 38)
+        Me.cmd_alquilerxsocio.TabIndex = 6
+        Me.cmd_alquilerxsocio.Text = "Alquileres por socio"
+        Me.cmd_alquilerxsocio.UseVisualStyleBackColor = True
         '
         'Informes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(256, 291)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.cmd_alquilerxsocio)
+        Me.Controls.Add(Me.cmd_alquilerxgenero)
+        Me.Controls.Add(Me.cmd_devolucionatrasada)
         Me.Controls.Add(Me.btn_cancelar)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cmd_pelixartista)
@@ -105,7 +105,7 @@ Partial Class Informes
     Friend WithEvents cmd_pelixartista As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents btn_cancelar As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents cmd_devolucionatrasada As System.Windows.Forms.Button
+    Friend WithEvents cmd_alquilerxgenero As System.Windows.Forms.Button
+    Friend WithEvents cmd_alquilerxsocio As System.Windows.Forms.Button
 End Class

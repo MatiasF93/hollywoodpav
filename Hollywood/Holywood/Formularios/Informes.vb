@@ -1,6 +1,7 @@
 ﻿Public Class Informes
     Dim listado_peliculasXartista As Listado_peliculasXartista
     Dim listado_autorizados As Listado_autorizadosXsocio
+    Dim listado_alquilerXgenero As Listado_alquileresXgenero
     Private Sub cmd_pelixartista_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmd_pelixartista.Click
         listado_peliculasXartista = New Listado_peliculasXartista()
         listado_peliculasXartista.ShowDialog()
@@ -19,15 +20,10 @@
         Me.Close()
     End Sub
 
-    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
-
-    End Sub
-
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
-
-    End Sub
-
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-
+   
+    Private Sub cmd_alquilerxgenero_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmd_alquilerxgenero.Click
+        listado_alquilerXgenero = New Listado_alquileresXgenero()
+        listado_alquilerXgenero.ShowDialog()
+        listado_alquilerXgenero = Nothing
     End Sub
 End Class

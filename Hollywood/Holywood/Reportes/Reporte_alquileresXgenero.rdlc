@@ -6,22 +6,18 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>0cc412bc-8c6b-42f2-919b-9b2eb46a4f38</rd:DataSourceID>
+      <rd:DataSourceID>14c196b7-ab73-42d9-91f4-04ed17df30dc</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSet_peliculas_por_artista">
+    <DataSet Name="DataSet1">
       <Fields>
-        <Field Name="nombre_artista">
-          <DataField>nombre_artista</DataField>
+        <Field Name="nombre_alquiler">
+          <DataField>nombre_alquiler</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="nombre_pelicula">
-          <DataField>nombre_pelicula</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="personaje">
-          <DataField>personaje</DataField>
+        <Field Name="nombre_genero">
+          <DataField>nombre_genero</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
@@ -31,25 +27,22 @@
       </Query>
       <rd:DataSetInfo>
         <rd:DataSetName>WindowsApplication1</rd:DataSetName>
-        <rd:TableName>DataSet_peliculasXartista</rd:TableName>
-        <rd:ObjectDataSourceSelectMethod>peliculas_x_artista</rd:ObjectDataSourceSelectMethod>
-        <rd:ObjectDataSourceType>WindowsApplication1.DataSet_peliculasXartista, DataSets.DataSet_peliculasXartista.Designer.vb, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>DataSet_alquileresXgenero</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>alquileres_x_genero</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceType>WindowsApplication1.DataSet_alquileresXgenero, DataSets.DataSet_alquileresXgenero.Designer.vb, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
   <Body>
     <ReportItems>
-      <Tablix Name="Tablix1">
+      <Tablix Name="Tablix5">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.31633in</Width>
+              <Width>1.85316in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.31633in</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>2.31633in</Width>
+              <Width>1.83942in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -58,14 +51,14 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox40">
+                    <Textbox Name="Textbox67">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Película</Value>
+                              <Value>Película alquilada</Value>
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
                                 <Color>White</Color>
@@ -77,45 +70,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox40</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <BackgroundColor>CornflowerBlue</BackgroundColor>
-                        <VerticalAlign>Middle</VerticalAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                    <rd:Selected>true</rd:Selected>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox42">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Artista</Value>
-                              <Style>
-                                <FontFamily>Segoe UI</FontFamily>
-                                <Color>White</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox42</rd:DefaultName>
+                      <rd:DefaultName>Textbox67</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -133,14 +88,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox44">
+                    <Textbox Name="Textbox69">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Personaje que realiza</Value>
+                              <Value>Género</Value>
                               <Style>
                                 <FontFamily>Segoe UI</FontFamily>
                                 <Color>White</Color>
@@ -152,7 +107,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox44</rd:DefaultName>
+                      <rd:DefaultName>Textbox69</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -175,29 +130,26 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="nombre_pelicula">
+                    <Textbox Name="nombre_alquiler">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!nombre_pelicula.Value</Value>
+                              <Value>=Fields!nombre_alquiler.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>nombre_pelicula</rd:DefaultName>
+                      <rd:DefaultName>nombre_alquiler</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -208,62 +160,26 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="nombre_artista">
+                    <Textbox Name="nombre_genero">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!nombre_artista.Value</Value>
+                              <Value>=Fields!nombre_genero.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>nombre_artista</rd:DefaultName>
+                      <rd:DefaultName>nombre_genero</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <VerticalAlign>Middle</VerticalAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="personaje">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!personaje.Value</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>personaje</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -280,7 +196,6 @@
           <TablixMembers>
             <TablixMember />
             <TablixMember />
-            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -293,11 +208,11 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSet_peliculas_por_artista</DataSetName>
-        <Top>0.86466cm</Top>
-        <Left>0.71237cm</Left>
+        <DataSetName>DataSet1</DataSetName>
+        <Top>0.38841cm</Top>
+        <Left>4.96062cm</Left>
         <Height>1.2cm</Height>
-        <Width>17.65043cm</Width>
+        <Width>9.37916cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -305,28 +220,45 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2.10417in</Height>
+    <Height>2in</Height>
     <Style />
   </Body>
-  <Width>7.53125in</Width>
+  <Width>7.79167in</Width>
   <Page>
     <PageHeader>
       <Height>2.54cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Line Name="Line2">
-          <Top>2.36361cm</Top>
-          <Left>0.71237cm</Left>
-          <Height>0cm</Height>
-          <Width>17.88985cm</Width>
+        <Textbox Name="txt_hollywood">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>HOLLYWOOD</Value>
+                  <Style>
+                    <FontFamily>SF Hollywood Hills</FontFamily>
+                    <FontSize>20pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <Height>0.9175cm</Height>
+          <Width>4.85479cm</Width>
           <Style>
             <Border>
-              <Color>Silver</Color>
-              <Style>Solid</Style>
+              <Style>None</Style>
             </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
           </Style>
-        </Line>
+        </Textbox>
         <Textbox Name="txt_titulo">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
@@ -348,8 +280,8 @@
               </Style>
             </Paragraph>
           </Paragraphs>
-          <Top>0.71865cm</Top>
-          <Left>5.0074cm</Left>
+          <Top>0.73173cm</Top>
+          <Left>4.96062cm</Left>
           <Height>1.10271cm</Height>
           <Width>9.37916cm</Width>
           <ZIndex>1</ZIndex>
@@ -358,36 +290,6 @@
               <Style>None</Style>
             </Border>
             <VerticalAlign>Middle</VerticalAlign>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-        <Textbox Name="txt_hollywood">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>HOLLYWOOD</Value>
-                  <Style>
-                    <FontFamily>SF Hollywood Hills</FontFamily>
-                    <FontSize>20pt</FontSize>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <Height>0.9175cm</Height>
-          <Width>4.85479cm</Width>
-          <ZIndex>2</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
             <PaddingLeft>2pt</PaddingLeft>
             <PaddingRight>2pt</PaddingRight>
             <PaddingTop>2pt</PaddingTop>
@@ -409,10 +311,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox7</rd:DefaultName>
-          <Left>14.88758cm</Left>
+          <Left>15.54903cm</Left>
           <Height>0.6cm</Height>
           <Width>4.2418cm</Width>
-          <ZIndex>3</ZIndex>
+          <ZIndex>2</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -431,10 +333,22 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>2.16958cm</Height>
+      <Height>2.54cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
+        <Line Name="Line3">
+          <Top>0.17639cm</Top>
+          <Left>0.94711cm</Left>
+          <Height>0cm</Height>
+          <Width>17.89662cm</Width>
+          <Style>
+            <Border>
+              <Color>Silver</Color>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
         <Textbox Name="txt_pagina">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
@@ -454,10 +368,11 @@
               </Style>
             </Paragraph>
           </Paragraphs>
-          <Top>0.98797cm</Top>
-          <Left>16.09682cm</Left>
+          <Top>1.55208cm</Top>
+          <Left>17.04593cm</Left>
           <Height>0.6cm</Height>
           <Width>1.20355cm</Width>
+          <ZIndex>1</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -488,11 +403,11 @@
               </Style>
             </Paragraph>
           </Paragraphs>
-          <Top>0.98797cm</Top>
-          <Left>17.37092cm</Left>
+          <Top>1.55208cm</Top>
+          <Left>18.35532cm</Left>
           <Height>0.6cm</Height>
           <Width>0.99188cm</Width>
-          <ZIndex>1</ZIndex>
+          <ZIndex>2</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -504,19 +419,6 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Line Name="Line3">
-          <Top>0.29057cm</Top>
-          <Left>0.48409cm</Left>
-          <Height>0cm</Height>
-          <Width>17.89662cm</Width>
-          <ZIndex>2</ZIndex>
-          <Style>
-            <Border>
-              <Color>Silver</Color>
-              <Style>Solid</Style>
-            </Border>
-          </Style>
-        </Line>
       </ReportItems>
       <Style>
         <Border>
@@ -533,6 +435,6 @@
     <ColumnSpacing>0.13cm</ColumnSpacing>
     <Style />
   </Page>
-  <rd:ReportID>73bf1b14-e94a-4b63-a356-e92b94e1e1b0</rd:ReportID>
+  <rd:ReportID>9068d990-a50d-4521-bbd1-2cd5a27f9868</rd:ReportID>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
 </Report>

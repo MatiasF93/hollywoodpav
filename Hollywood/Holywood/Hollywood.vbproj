@@ -86,6 +86,14 @@
     <Compile Include="Clases\TextBox_v1.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DataSets\DataSet_alquileresXgenero.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_alquileresXgenero.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\DataSet_alquileresXgenero.vb">
+      <DependentUpon>DataSet_alquileresXgenero.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSets\DataSet_peliculasXartista.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -101,6 +109,12 @@
       <DependentUpon>Informes.vb</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Informes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Listado_alquileresXgenero.Designer.vb">
+      <DependentUpon>Listado_alquileresXgenero.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Listado_alquileresXgenero.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Listado_peliculasXartista.Designer.vb">
@@ -213,6 +227,9 @@
     <EmbeddedResource Include="Formularios\Informes.resx">
       <DependentUpon>Informes.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Listado_alquileresXgenero.resx">
+      <DependentUpon>Listado_alquileresXgenero.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Listado_peliculasXartista.resx">
       <DependentUpon>Listado_peliculasXartista.vb</DependentUpon>
     </EmbeddedResource>
@@ -243,6 +260,7 @@
     <EmbeddedResource Include="Formularios\Registrar_socio.resx">
       <DependentUpon>Registrar_socio.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Reporte_alquileresXgenero.rdlc" />
     <EmbeddedResource Include="Reportes\Reporte_autorizadosXsocio.rdlc">
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -264,8 +282,17 @@
     <EmbeddedResource Include="Reportes\Reporte_peliculasXartista.rdlc" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config">
+    <None Include="app.config" />
+    <None Include="DataSets\DataSet_alquileresXgenero.xsc">
+      <DependentUpon>DataSet_alquileresXgenero.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DataSet_alquileresXgenero.xsd">
       <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_alquileresXgenero.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSets\DataSet_alquileresXgenero.xss">
+      <DependentUpon>DataSet_alquileresXgenero.xsd</DependentUpon>
     </None>
     <None Include="DataSets\DataSet_autorizadosXsocio.xsc">
       <DependentUpon>DataSet_autorizadosXsocio.xsd</DependentUpon>
@@ -293,6 +320,7 @@
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
+    <None Include="My Project\DataSources\DataSet_alquileresXgenero.datasource" />
     <None Include="My Project\DataSources\DataSet_autorizadosXsocio.datasource" />
     <None Include="My Project\DataSources\DataSet_peliculasXartista.datasource" />
     <None Include="My Project\Settings.settings">
