@@ -2,6 +2,7 @@
     Dim listado_peliculasXartista As Listado_peliculasXartista
     Dim listado_autorizados As Listado_autorizadosXsocio
     Dim listado_alquilerXgenero As Listado_alquileresXgenero
+    Dim listado_alquileresXsocio As Listado_alquileresXsocio
     Private Sub cmd_pelixartista_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmd_pelixartista.Click
         listado_peliculasXartista = New Listado_peliculasXartista()
         listado_peliculasXartista.ShowDialog()
@@ -25,5 +26,12 @@
         listado_alquilerXgenero = New Listado_alquileresXgenero()
         listado_alquilerXgenero.ShowDialog()
         listado_alquilerXgenero = Nothing
+    End Sub
+
+    Private Sub cmd_alquilerxsocio_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmd_alquilerxsocio.Click
+        listado_alquileresXsocio = New Listado_alquileresXsocio()
+        listado_alquileresXsocio.ShowDialog()
+        listado_alquileresXsocio = Nothing
+
     End Sub
 End Class

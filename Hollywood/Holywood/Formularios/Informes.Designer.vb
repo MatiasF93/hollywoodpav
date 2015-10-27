@@ -88,7 +88,7 @@ Partial Class Informes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(256, 291)
+        Me.ClientSize = New System.Drawing.Size(256, 293)
         Me.Controls.Add(Me.cmd_alquilerxsocio)
         Me.Controls.Add(Me.cmd_alquilerxgenero)
         Me.Controls.Add(Me.cmd_devolucionatrasada)

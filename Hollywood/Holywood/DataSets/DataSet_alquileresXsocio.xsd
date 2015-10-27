@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_alquileresXsocio" targetNamespace="http://tempuri.org/DataSet_alquileresXsocio.xsd" xmlns:mstns="http://tempuri.org/DataSet_alquileresXsocio.xsd" xmlns="http://tempuri.org/DataSet_alquileresXsocio.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_alquileresXsocio" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet_alquileresXsocio" msprop:Generator_UserDSName="DataSet_alquileresXsocio">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="alquileresXsocio" msprop:Generator_TableClassName="alquileresXsocioDataTable" msprop:Generator_TableVarName="tablealquileresXsocio" msprop:Generator_RowChangedName="alquileresXsocioRowChanged" msprop:Generator_TablePropName="alquileresXsocio" msprop:Generator_RowDeletingName="alquileresXsocioRowDeleting" msprop:Generator_RowChangingName="alquileresXsocioRowChanging" msprop:Generator_RowEvHandlerName="alquileresXsocioRowChangeEventHandler" msprop:Generator_RowDeletedName="alquileresXsocioRowDeleted" msprop:Generator_RowClassName="alquileresXsocioRow" msprop:Generator_UserTableName="alquileresXsocio" msprop:Generator_RowEvArgName="alquileresXsocioRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombre_socio" msprop:Generator_ColumnVarNameInTable="columnnombre_socio" msprop:Generator_ColumnPropNameInRow="nombre_socio" msprop:Generator_ColumnPropNameInTable="nombre_socioColumn" msprop:Generator_UserColumnName="nombre_socio" type="xs:string" minOccurs="0" />
+              <xs:element name="pelicula_alquilada" msprop:Generator_ColumnVarNameInTable="columnpelicula_alquilada" msprop:Generator_ColumnPropNameInRow="pelicula_alquilada" msprop:Generator_ColumnPropNameInTable="pelicula_alquiladaColumn" msprop:Generator_UserColumnName="pelicula_alquilada" type="xs:string" minOccurs="0" />
+              <xs:element name="fecha_alquiler" msprop:Generator_ColumnVarNameInTable="columnfecha_alquiler" msprop:Generator_ColumnPropNameInRow="fecha_alquiler" msprop:Generator_ColumnPropNameInTable="fecha_alquilerColumn" msprop:Generator_UserColumnName="fecha_alquiler" type="xs:string" minOccurs="0" />
+              <xs:element name="devolucion_estimada" msprop:Generator_ColumnVarNameInTable="columndevolucion_estimada" msprop:Generator_ColumnPropNameInRow="devolucion_estimada" msprop:Generator_ColumnPropNameInTable="devolucion_estimadaColumn" msprop:Generator_UserColumnName="devolucion_estimada" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="cantidad_alquileres" msprop:Generator_TableClassName="cantidad_alquileresDataTable" msprop:Generator_TableVarName="tablecantidad_alquileres" msprop:Generator_TablePropName="cantidad_alquileres" msprop:Generator_RowDeletingName="cantidad_alquileresRowDeleting" msprop:Generator_RowChangingName="cantidad_alquileresRowChanging" msprop:Generator_RowEvHandlerName="cantidad_alquileresRowChangeEventHandler" msprop:Generator_RowDeletedName="cantidad_alquileresRowDeleted" msprop:Generator_UserTableName="cantidad_alquileres" msprop:Generator_RowChangedName="cantidad_alquileresRowChanged" msprop:Generator_RowEvArgName="cantidad_alquileresRowChangeEvent" msprop:Generator_RowClassName="cantidad_alquileresRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombre_socio" msprop:Generator_ColumnVarNameInTable="columnnombre_socio" msprop:Generator_ColumnPropNameInRow="nombre_socio" msprop:Generator_ColumnPropNameInTable="nombre_socioColumn" msprop:Generator_UserColumnName="nombre_socio" type="xs:string" minOccurs="0" />
+              <xs:element name="cantidad" msprop:Generator_ColumnVarNameInTable="columncantidad" msprop:Generator_ColumnPropNameInRow="cantidad" msprop:Generator_ColumnPropNameInTable="cantidadColumn" msprop:Generator_UserColumnName="cantidad" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
