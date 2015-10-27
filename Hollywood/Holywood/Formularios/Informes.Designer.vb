@@ -24,16 +24,19 @@ Partial Class Informes
     Private Sub InitializeComponent()
         Me.cmd_pelixartista = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.cmd_autorizadosxsocio = New System.Windows.Forms.Button()
+        Me.btn_cancelar = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'cmd_pelixartista
         '
-        Me.cmd_pelixartista.Location = New System.Drawing.Point(12, 96)
+        Me.cmd_pelixartista.Location = New System.Drawing.Point(48, 52)
         Me.cmd_pelixartista.Name = "cmd_pelixartista"
-        Me.cmd_pelixartista.Size = New System.Drawing.Size(232, 38)
+        Me.cmd_pelixartista.Size = New System.Drawing.Size(164, 38)
         Me.cmd_pelixartista.TabIndex = 0
-        Me.cmd_pelixartista.Text = "Listado de artistas por pelicula"
+        Me.cmd_pelixartista.Text = "Películas y artistas"
         Me.cmd_pelixartista.UseVisualStyleBackColor = True
         '
         'Label1
@@ -45,29 +48,64 @@ Partial Class Informes
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Reportes y estadísticas"
         '
-        'cmd_autorizadosxsocio
+        'btn_cancelar
         '
-        Me.cmd_autorizadosxsocio.Location = New System.Drawing.Point(12, 52)
-        Me.cmd_autorizadosxsocio.Name = "cmd_autorizadosxsocio"
-        Me.cmd_autorizadosxsocio.Size = New System.Drawing.Size(232, 38)
-        Me.cmd_autorizadosxsocio.TabIndex = 2
-        Me.cmd_autorizadosxsocio.Text = "Listado de autorizados por socio"
-        Me.cmd_autorizadosxsocio.UseVisualStyleBackColor = True
+        Me.btn_cancelar.Image = Global.WindowsApplication1.My.Resources.Resources._112_LeftArrowLong_Blue___copia
+        Me.btn_cancelar.Location = New System.Drawing.Point(12, 239)
+        Me.btn_cancelar.Name = "btn_cancelar"
+        Me.btn_cancelar.Size = New System.Drawing.Size(40, 40)
+        Me.btn_cancelar.TabIndex = 3
+        Me.btn_cancelar.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(48, 184)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(164, 38)
+        Me.Button1.TabIndex = 4
+        Me.Button1.Text = "Devoluciones atrasadas"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(48, 96)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(164, 38)
+        Me.Button2.TabIndex = 5
+        Me.Button2.Text = "Alquileres por género"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(48, 140)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(164, 38)
+        Me.Button3.TabIndex = 6
+        Me.Button3.Text = "Alquileres por socio"
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'Informes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(256, 327)
-        Me.Controls.Add(Me.cmd_autorizadosxsocio)
+        Me.ClientSize = New System.Drawing.Size(256, 291)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btn_cancelar)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cmd_pelixartista)
+        Me.MaximizeBox = False
         Me.Name = "Informes"
-        Me.Text = "Informes"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Informes - Hollywood"
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents cmd_pelixartista As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents cmd_autorizadosxsocio As System.Windows.Forms.Button
+    Friend WithEvents btn_cancelar As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Button3 As System.Windows.Forms.Button
 End Class

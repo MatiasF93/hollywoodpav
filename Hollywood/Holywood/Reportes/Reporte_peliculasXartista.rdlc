@@ -296,7 +296,7 @@
         <Top>0.86466cm</Top>
         <Left>0.71237cm</Left>
         <Height>1.2cm</Height>
-        <Width>17.65044cm</Width>
+        <Width>17.65043cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -333,7 +333,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Listado de Peliculas por Artista</Value>
+                  <Value>Listado de películas por artista</Value>
                   <Style>
                     <FontFamily>Segoe UI Light</FontFamily>
                     <FontSize>20pt</FontSize>
@@ -383,6 +383,35 @@
           <Height>0.9175cm</Height>
           <Width>4.85479cm</Width>
           <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox7">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>= FormatDateTime(DateTime.Now)</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox7</rd:DefaultName>
+          <Left>14.88758cm</Left>
+          <Height>0.6cm</Height>
+          <Width>4.2418cm</Width>
+          <ZIndex>3</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>

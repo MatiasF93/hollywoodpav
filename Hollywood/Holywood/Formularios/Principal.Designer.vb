@@ -66,6 +66,9 @@ Partial Class Principal
         Me.grid_id_genero = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.grid_id_formato = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cmd_nueva = New System.Windows.Forms.Button()
+        Me.txt_director = New WindowsApplication1.TextBox_v1()
+        Me.txt_actor = New WindowsApplication1.TextBox_v1()
+        Me.txt_pelicula = New WindowsApplication1.TextBox_v1()
         Me.cmd_buscar = New System.Windows.Forms.Button()
         Me.lbl_director = New System.Windows.Forms.Label()
         Me.lbl_actor = New System.Windows.Forms.Label()
@@ -74,9 +77,6 @@ Partial Class Principal
         Me.lbl_pelicula = New System.Windows.Forms.Label()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.txt_director = New WindowsApplication1.TextBox_v1()
-        Me.txt_actor = New WindowsApplication1.TextBox_v1()
-        Me.txt_pelicula = New WindowsApplication1.TextBox_v1()
         Me.Panel1.SuspendLayout()
         Me.pnl_botones_socio.SuspendLayout()
         Me.pnl_botones_admin.SuspendLayout()
@@ -91,7 +91,7 @@ Partial Class Principal
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lbl_logo.AutoEllipsis = True
         Me.lbl_logo.Cursor = System.Windows.Forms.Cursors.Default
-        Me.lbl_logo.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_logo.Font = New System.Drawing.Font("SF Hollywood Hills", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_logo.Location = New System.Drawing.Point(24, 10)
         Me.lbl_logo.Name = "lbl_logo"
         Me.lbl_logo.Size = New System.Drawing.Size(332, 148)
@@ -498,6 +498,33 @@ Partial Class Principal
         Me.cmd_nueva.TabIndex = 20
         Me.cmd_nueva.UseVisualStyleBackColor = True
         '
+        'txt_director
+        '
+        Me.txt_director._mensaje_error = ""
+        Me.txt_director._validar = True
+        Me.txt_director.Location = New System.Drawing.Point(352, 98)
+        Me.txt_director.Name = "txt_director"
+        Me.txt_director.Size = New System.Drawing.Size(164, 20)
+        Me.txt_director.TabIndex = 3
+        '
+        'txt_actor
+        '
+        Me.txt_actor._mensaje_error = ""
+        Me.txt_actor._validar = True
+        Me.txt_actor.Location = New System.Drawing.Point(352, 64)
+        Me.txt_actor.Name = "txt_actor"
+        Me.txt_actor.Size = New System.Drawing.Size(164, 20)
+        Me.txt_actor.TabIndex = 1
+        '
+        'txt_pelicula
+        '
+        Me.txt_pelicula._mensaje_error = ""
+        Me.txt_pelicula._validar = True
+        Me.txt_pelicula.Location = New System.Drawing.Point(95, 64)
+        Me.txt_pelicula.Name = "txt_pelicula"
+        Me.txt_pelicula.Size = New System.Drawing.Size(167, 20)
+        Me.txt_pelicula.TabIndex = 0
+        '
         'cmd_buscar
         '
         Me.cmd_buscar.Image = Global.WindowsApplication1.My.Resources.Resources.search
@@ -571,33 +598,6 @@ Partial Class Principal
         Me.LineShape1.X2 = 749
         Me.LineShape1.Y1 = 144
         Me.LineShape1.Y2 = 144
-        '
-        'txt_director
-        '
-        Me.txt_director._mensaje_error = ""
-        Me.txt_director._validar = True
-        Me.txt_director.Location = New System.Drawing.Point(352, 98)
-        Me.txt_director.Name = "txt_director"
-        Me.txt_director.Size = New System.Drawing.Size(164, 20)
-        Me.txt_director.TabIndex = 3
-        '
-        'txt_actor
-        '
-        Me.txt_actor._mensaje_error = ""
-        Me.txt_actor._validar = True
-        Me.txt_actor.Location = New System.Drawing.Point(352, 64)
-        Me.txt_actor.Name = "txt_actor"
-        Me.txt_actor.Size = New System.Drawing.Size(164, 20)
-        Me.txt_actor.TabIndex = 1
-        '
-        'txt_pelicula
-        '
-        Me.txt_pelicula._mensaje_error = ""
-        Me.txt_pelicula._validar = True
-        Me.txt_pelicula.Location = New System.Drawing.Point(95, 64)
-        Me.txt_pelicula.Name = "txt_pelicula"
-        Me.txt_pelicula.Size = New System.Drawing.Size(167, 20)
-        Me.txt_pelicula.TabIndex = 0
         '
         'Principal
         '

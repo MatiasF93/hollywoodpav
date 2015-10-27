@@ -8,10 +8,26 @@
 
     End Sub
 
-    Private Sub cmd_autorizadosxsocio_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmd_autorizadosxsocio.Click
+    Private Sub cmd_autorizadosxsocio_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         listado_autorizados = New Listado_autorizadosXsocio()
         listado_autorizados.ShowDialog()
         listado_autorizados = Nothing
+
+    End Sub
+
+    Private Sub btn_cancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_cancelar.Click
+        Me.Close()
+    End Sub
+
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+
+    End Sub
+
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
 
     End Sub
 End Class
