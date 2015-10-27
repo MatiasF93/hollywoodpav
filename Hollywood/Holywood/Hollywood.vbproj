@@ -260,6 +260,7 @@
     <EmbeddedResource Include="Formularios\Registrar_socio.resx">
       <DependentUpon>Registrar_socio.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Est_alquileresXgenero.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteEst_peliculasXartista.rdlc" />
     <EmbeddedResource Include="Reportes\Reporte_alquileresXgenero.rdlc" />
     <EmbeddedResource Include="Reportes\Reporte_autorizadosXsocio.rdlc">

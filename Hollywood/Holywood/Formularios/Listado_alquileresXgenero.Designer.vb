@@ -24,6 +24,7 @@ Partial Class Listado_alquileresXgenero
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.DataSet_alquileresXgeneroBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -32,10 +33,17 @@ Partial Class Listado_alquileresXgenero
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.txt_mayor = New System.Windows.Forms.TextBox()
+        Me.txt_menor = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ReportViewer2 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.btn_cancelar = New System.Windows.Forms.Button()
         CType(Me.DataSet_alquileresXgeneroBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
         Me.SuspendLayout()
         '
         'DataSet_alquileresXgeneroBindingSource
@@ -110,6 +118,12 @@ Partial Class Listado_alquileresXgenero
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.txt_mayor)
+        Me.TabPage2.Controls.Add(Me.txt_menor)
+        Me.TabPage2.Controls.Add(Me.Label3)
+        Me.TabPage2.Controls.Add(Me.Label2)
+        Me.TabPage2.Controls.Add(Me.Button1)
+        Me.TabPage2.Controls.Add(Me.ReportViewer2)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -117,6 +131,61 @@ Partial Class Listado_alquileresXgenero
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Grafico de alquileres por género"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'txt_mayor
+        '
+        Me.txt_mayor.Location = New System.Drawing.Point(271, 331)
+        Me.txt_mayor.Name = "txt_mayor"
+        Me.txt_mayor.Size = New System.Drawing.Size(100, 20)
+        Me.txt_mayor.TabIndex = 3
+        '
+        'txt_menor
+        '
+        Me.txt_menor.Location = New System.Drawing.Point(120, 331)
+        Me.txt_menor.Name = "txt_menor"
+        Me.txt_menor.Size = New System.Drawing.Size(100, 20)
+        Me.txt_menor.TabIndex = 3
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(226, 334)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(39, 13)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Mayor:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(9, 334)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(105, 13)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Valores entre Menor:"
+        '
+        'Button1
+        '
+        Me.Button1.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.search
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button1.Location = New System.Drawing.Point(386, 320)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(42, 40)
+        Me.Button1.TabIndex = 1
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'ReportViewer2
+        '
+        Me.ReportViewer2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        ReportDataSource2.Name = "DataSet1"
+        ReportDataSource2.Value = Me.DataSet_alquileresXgeneroBindingSource
+        Me.ReportViewer2.LocalReport.DataSources.Add(ReportDataSource2)
+        Me.ReportViewer2.LocalReport.ReportEmbeddedResource = "WindowsApplication1.Est_alquileresXgenero.rdlc"
+        Me.ReportViewer2.Location = New System.Drawing.Point(0, 0)
+        Me.ReportViewer2.Name = "ReportViewer2"
+        Me.ReportViewer2.Size = New System.Drawing.Size(568, 318)
+        Me.ReportViewer2.TabIndex = 0
         '
         'btn_cancelar
         '
@@ -140,6 +209,8 @@ Partial Class Listado_alquileresXgenero
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        Me.TabPage2.ResumeLayout(False)
+        Me.TabPage2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -152,4 +223,10 @@ Partial Class Listado_alquileresXgenero
     Friend WithEvents cmd_buscar As System.Windows.Forms.Button
     Friend WithEvents btn_cancelar As System.Windows.Forms.Button
     Friend WithEvents DataSet_alquileresXgeneroBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents ReportViewer2 As Microsoft.Reporting.WinForms.ReportViewer
+    Friend WithEvents txt_mayor As System.Windows.Forms.TextBox
+    Friend WithEvents txt_menor As System.Windows.Forms.TextBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

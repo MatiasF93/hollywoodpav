@@ -15,8 +15,8 @@
         <xs:element name="alquileres_x_genero" msprop:Generator_TableClassName="alquileres_x_generoDataTable" msprop:Generator_TableVarName="tablealquileres_x_genero" msprop:Generator_TablePropName="alquileres_x_genero" msprop:Generator_RowDeletingName="alquileres_x_generoRowDeleting" msprop:Generator_RowChangingName="alquileres_x_generoRowChanging" msprop:Generator_RowEvHandlerName="alquileres_x_generoRowChangeEventHandler" msprop:Generator_RowDeletedName="alquileres_x_generoRowDeleted" msprop:Generator_UserTableName="alquileres_x_genero" msprop:Generator_RowChangedName="alquileres_x_generoRowChanged" msprop:Generator_RowEvArgName="alquileres_x_generoRowChangeEvent" msprop:Generator_RowClassName="alquileres_x_generoRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="nombre_alquiler" msprop:Generator_ColumnVarNameInTable="columnnombre_alquiler" msprop:Generator_ColumnPropNameInRow="nombre_alquiler" msprop:Generator_ColumnPropNameInTable="nombre_alquilerColumn" msprop:Generator_UserColumnName="nombre_alquiler" type="xs:string" minOccurs="0" />
-              <xs:element name="nombre_genero" msprop:Generator_ColumnVarNameInTable="columnnombre_genero" msprop:Generator_ColumnPropNameInRow="nombre_genero" msprop:Generator_ColumnPropNameInTable="nombre_generoColumn" msprop:Generator_UserColumnName="nombre_genero" type="xs:string" minOccurs="0" />
+              <xs:element name="genero" msprop:Generator_ColumnVarNameInTable="columngenero" msprop:Generator_ColumnPropNameInRow="genero" msprop:Generator_ColumnPropNameInTable="generoColumn" msprop:Generator_UserColumnName="genero" type="xs:string" minOccurs="0" />
+              <xs:element name="cantidad" msprop:Generator_ColumnVarNameInTable="columncantidad" msprop:Generator_ColumnPropNameInRow="cantidad" msprop:Generator_ColumnPropNameInTable="cantidadColumn" msprop:Generator_UserColumnName="cantidad" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

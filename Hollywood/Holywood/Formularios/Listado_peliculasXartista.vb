@@ -55,4 +55,7 @@
     End Sub
 
 
+    Private Sub ReportViewer2_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ReportViewer2.Load
+
+    End Sub
 End Class
