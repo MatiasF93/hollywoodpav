@@ -8,6 +8,21 @@
     Private Sub Alquileres_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Principal.carga_combo(Me.cmb_tipo_doc, Me.acceso.leo_otra_tabla("tipos_documento"), "id_tipo_documento", _
                               "tipo_documento")
+        Me.cargar_grilla("")
+    End Sub
+
+    Private Sub cargar_grilla(ByVal filtros As String)
+        Me.grid_alquileres.Rows.Clear()
+        Dim tabla As Data.DataTable = Me.acceso.leo_tabla()
+        For Each row As Data.DataRow In tabla.Rows
+            Dim socio As Socio = Principal.obtener_socio(row("num_socio"))
+            Dim tabla_detalles As Data.DataTable = Me.acceso.leo_otra_tabla("detalles_factura", _
+                                "num_factura = " + row("num_factura").ToString())
+            Me.grid_alquileres.Rows.Add(socio._tipo_documento, socio._nro_documento, socio._apellido, _
+                                row("num_factura").ToString(), tabla_detalles.Rows.Count, _
+                                row("monto_total").ToString(), row("fecha").ToString())
+        Next
+
     End Sub
 
     Private Function obtener_filtros() As String

@@ -30,7 +30,7 @@ Partial Class Alquileres
         Me.lbl_documento = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.cmd_buscar = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.grid_alquileres = New System.Windows.Forms.DataGridView()
         Me.dtp_fecha_alquiler = New System.Windows.Forms.DateTimePicker()
         Me.lbl_fecha_alquiler = New System.Windows.Forms.Label()
         Me.chb_incluir_devueltos = New System.Windows.Forms.CheckBox()
@@ -49,7 +49,7 @@ Partial Class Alquileres
         Me.ver = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.devolucion = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.anular = New System.Windows.Forms.DataGridViewButtonColumn()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.grid_alquileres, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btn_cancelar
@@ -128,14 +128,16 @@ Partial Class Alquileres
         Me.cmd_buscar.TabIndex = 30
         Me.cmd_buscar.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'grid_alquileres
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.tipo_doc_socio, Me.nro_doc_socio, Me.apellido_socio, Me.nro_factura, Me.cant_pelis, Me.monto, Me.fecha_alquiler, Me.fecha_devolucion, Me.ver, Me.devolucion, Me.anular})
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 147)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(962, 307)
-        Me.DataGridView1.TabIndex = 31
+        Me.grid_alquileres.AllowUserToAddRows = False
+        Me.grid_alquileres.AllowUserToDeleteRows = False
+        Me.grid_alquileres.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.grid_alquileres.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.tipo_doc_socio, Me.nro_doc_socio, Me.apellido_socio, Me.nro_factura, Me.cant_pelis, Me.monto, Me.fecha_alquiler, Me.fecha_devolucion, Me.ver, Me.devolucion, Me.anular})
+        Me.grid_alquileres.Location = New System.Drawing.Point(12, 147)
+        Me.grid_alquileres.Name = "grid_alquileres"
+        Me.grid_alquileres.Size = New System.Drawing.Size(962, 307)
+        Me.grid_alquileres.TabIndex = 31
         '
         'dtp_fecha_alquiler
         '
@@ -257,6 +259,7 @@ Partial Class Alquileres
         Me.fecha_devolucion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
         Me.fecha_devolucion.HeaderText = "Fecha devolución"
         Me.fecha_devolucion.Name = "fecha_devolucion"
+        Me.fecha_devolucion.Visible = False
         Me.fecha_devolucion.Width = 107
         '
         'ver
@@ -299,7 +302,7 @@ Partial Class Alquileres
         Me.Controls.Add(Me.chb_incluir_devueltos)
         Me.Controls.Add(Me.lbl_fecha_alquiler)
         Me.Controls.Add(Me.dtp_fecha_alquiler)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.grid_alquileres)
         Me.Controls.Add(Me.cmd_buscar)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txt_documento)
@@ -312,7 +315,7 @@ Partial Class Alquileres
         Me.Name = "Alquileres"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Alquileres - Hollywood"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.grid_alquileres, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -325,7 +328,7 @@ Partial Class Alquileres
     Friend WithEvents lbl_documento As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents cmd_buscar As System.Windows.Forms.Button
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents grid_alquileres As System.Windows.Forms.DataGridView
     Friend WithEvents dtp_fecha_alquiler As System.Windows.Forms.DateTimePicker
     Friend WithEvents lbl_fecha_alquiler As System.Windows.Forms.Label
     Friend WithEvents chb_incluir_devueltos As System.Windows.Forms.CheckBox
