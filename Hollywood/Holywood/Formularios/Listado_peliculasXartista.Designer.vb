@@ -23,7 +23,8 @@ Partial Class Listado_peliculasXartista
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource3 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource4 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.DataSet_peliculasXartistaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -32,10 +33,17 @@ Partial Class Listado_peliculasXartista
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tab_listado_artistasXpelicula = New System.Windows.Forms.TabPage()
         Me.tab_grafico_peliculasXartista = New System.Windows.Forms.TabPage()
+        Me.cmd_buscarEst = New System.Windows.Forms.Button()
+        Me.txt_mayor = New System.Windows.Forms.TextBox()
+        Me.txt_menor = New System.Windows.Forms.TextBox()
+        Me.lbl_menor = New System.Windows.Forms.Label()
+        Me.lbl_mayor = New System.Windows.Forms.Label()
+        Me.ReportViewer2 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.btn_cancelar = New System.Windows.Forms.Button()
         CType(Me.DataSet_peliculasXartistaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.tab_listado_artistasXpelicula.SuspendLayout()
+        Me.tab_grafico_peliculasXartista.SuspendLayout()
         Me.SuspendLayout()
         '
         'DataSet_peliculasXartistaBindingSource
@@ -45,9 +53,9 @@ Partial Class Listado_peliculasXartista
         '
         'ReportViewer1
         '
-        ReportDataSource2.Name = "DataSet_peliculas_por_artista"
-        ReportDataSource2.Value = Me.DataSet_peliculasXartistaBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource2)
+        ReportDataSource3.Name = "DataSet_peliculas_por_artista"
+        ReportDataSource3.Value = Me.DataSet_peliculasXartistaBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource3)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "WindowsApplication1.Reporte_peliculasXartista.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(6, 6)
         Me.ReportViewer1.Name = "ReportViewer1"
@@ -106,13 +114,72 @@ Partial Class Listado_peliculasXartista
         '
         'tab_grafico_peliculasXartista
         '
+        Me.tab_grafico_peliculasXartista.Controls.Add(Me.cmd_buscarEst)
+        Me.tab_grafico_peliculasXartista.Controls.Add(Me.txt_mayor)
+        Me.tab_grafico_peliculasXartista.Controls.Add(Me.txt_menor)
+        Me.tab_grafico_peliculasXartista.Controls.Add(Me.lbl_menor)
+        Me.tab_grafico_peliculasXartista.Controls.Add(Me.lbl_mayor)
+        Me.tab_grafico_peliculasXartista.Controls.Add(Me.ReportViewer2)
         Me.tab_grafico_peliculasXartista.Location = New System.Drawing.Point(4, 22)
         Me.tab_grafico_peliculasXartista.Name = "tab_grafico_peliculasXartista"
         Me.tab_grafico_peliculasXartista.Padding = New System.Windows.Forms.Padding(3)
-        Me.tab_grafico_peliculasXartista.Size = New System.Drawing.Size(712, 390)
+        Me.tab_grafico_peliculasXartista.Size = New System.Drawing.Size(743, 390)
         Me.tab_grafico_peliculasXartista.TabIndex = 1
         Me.tab_grafico_peliculasXartista.Text = "Gráfico de películas por artista"
         Me.tab_grafico_peliculasXartista.UseVisualStyleBackColor = True
+        '
+        'cmd_buscarEst
+        '
+        Me.cmd_buscarEst.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmd_buscarEst.Image = Global.WindowsApplication1.My.Resources.Resources.search
+        Me.cmd_buscarEst.Location = New System.Drawing.Point(511, 343)
+        Me.cmd_buscarEst.Name = "cmd_buscarEst"
+        Me.cmd_buscarEst.Size = New System.Drawing.Size(40, 40)
+        Me.cmd_buscarEst.TabIndex = 11
+        Me.cmd_buscarEst.UseVisualStyleBackColor = True
+        '
+        'txt_mayor
+        '
+        Me.txt_mayor.Location = New System.Drawing.Point(301, 355)
+        Me.txt_mayor.Name = "txt_mayor"
+        Me.txt_mayor.Size = New System.Drawing.Size(173, 20)
+        Me.txt_mayor.TabIndex = 10
+        '
+        'txt_menor
+        '
+        Me.txt_menor.Location = New System.Drawing.Point(49, 355)
+        Me.txt_menor.Name = "txt_menor"
+        Me.txt_menor.Size = New System.Drawing.Size(173, 20)
+        Me.txt_menor.TabIndex = 9
+        '
+        'lbl_menor
+        '
+        Me.lbl_menor.AutoSize = True
+        Me.lbl_menor.Location = New System.Drawing.Point(6, 358)
+        Me.lbl_menor.Name = "lbl_menor"
+        Me.lbl_menor.Size = New System.Drawing.Size(37, 13)
+        Me.lbl_menor.TabIndex = 8
+        Me.lbl_menor.Text = "Menor"
+        '
+        'lbl_mayor
+        '
+        Me.lbl_mayor.AutoSize = True
+        Me.lbl_mayor.Location = New System.Drawing.Point(259, 358)
+        Me.lbl_mayor.Name = "lbl_mayor"
+        Me.lbl_mayor.Size = New System.Drawing.Size(36, 13)
+        Me.lbl_mayor.TabIndex = 7
+        Me.lbl_mayor.Text = "Mayor"
+        '
+        'ReportViewer2
+        '
+        ReportDataSource4.Name = "DataSet1"
+        ReportDataSource4.Value = Me.DataSet_peliculasXartistaBindingSource
+        Me.ReportViewer2.LocalReport.DataSources.Add(ReportDataSource4)
+        Me.ReportViewer2.LocalReport.ReportEmbeddedResource = "WindowsApplication1.ReporteEst_peliculasXartista.rdlc"
+        Me.ReportViewer2.Location = New System.Drawing.Point(6, 6)
+        Me.ReportViewer2.Name = "ReportViewer2"
+        Me.ReportViewer2.Size = New System.Drawing.Size(736, 331)
+        Me.ReportViewer2.TabIndex = 0
         '
         'btn_cancelar
         '
@@ -138,6 +205,8 @@ Partial Class Listado_peliculasXartista
         Me.TabControl1.ResumeLayout(False)
         Me.tab_listado_artistasXpelicula.ResumeLayout(False)
         Me.tab_listado_artistasXpelicula.PerformLayout()
+        Me.tab_grafico_peliculasXartista.ResumeLayout(False)
+        Me.tab_grafico_peliculasXartista.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -150,4 +219,10 @@ Partial Class Listado_peliculasXartista
     Friend WithEvents tab_listado_artistasXpelicula As System.Windows.Forms.TabPage
     Friend WithEvents tab_grafico_peliculasXartista As System.Windows.Forms.TabPage
     Friend WithEvents btn_cancelar As System.Windows.Forms.Button
+    Friend WithEvents ReportViewer2 As Microsoft.Reporting.WinForms.ReportViewer
+    Friend WithEvents txt_mayor As System.Windows.Forms.TextBox
+    Friend WithEvents txt_menor As System.Windows.Forms.TextBox
+    Friend WithEvents lbl_menor As System.Windows.Forms.Label
+    Friend WithEvents lbl_mayor As System.Windows.Forms.Label
+    Friend WithEvents cmd_buscarEst As System.Windows.Forms.Button
 End Class

@@ -12,12 +12,20 @@
   <xs:element name="DataSet_peliculasXartista" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet_peliculasXartista" msprop:Generator_UserDSName="DataSet_peliculasXartista">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="peliculas_x_artista" msprop:Generator_TableClassName="peliculas_x_artistaDataTable" msprop:Generator_TableVarName="tablepeliculas_x_artista" msprop:Generator_TablePropName="peliculas_x_artista" msprop:Generator_RowDeletingName="peliculas_x_artistaRowDeleting" msprop:Generator_RowChangingName="peliculas_x_artistaRowChanging" msprop:Generator_RowEvHandlerName="peliculas_x_artistaRowChangeEventHandler" msprop:Generator_RowDeletedName="peliculas_x_artistaRowDeleted" msprop:Generator_UserTableName="peliculas_x_artista" msprop:Generator_RowChangedName="peliculas_x_artistaRowChanged" msprop:Generator_RowEvArgName="peliculas_x_artistaRowChangeEvent" msprop:Generator_RowClassName="peliculas_x_artistaRow">
+        <xs:element name="peliculas_x_artista" msprop:Generator_TableClassName="peliculas_x_artistaDataTable" msprop:Generator_TableVarName="tablepeliculas_x_artista" msprop:Generator_RowChangedName="peliculas_x_artistaRowChanged" msprop:Generator_TablePropName="peliculas_x_artista" msprop:Generator_RowDeletingName="peliculas_x_artistaRowDeleting" msprop:Generator_RowChangingName="peliculas_x_artistaRowChanging" msprop:Generator_RowEvHandlerName="peliculas_x_artistaRowChangeEventHandler" msprop:Generator_RowDeletedName="peliculas_x_artistaRowDeleted" msprop:Generator_RowClassName="peliculas_x_artistaRow" msprop:Generator_UserTableName="peliculas_x_artista" msprop:Generator_RowEvArgName="peliculas_x_artistaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nombre_artista" msprop:Generator_ColumnVarNameInTable="columnnombre_artista" msprop:Generator_ColumnPropNameInRow="nombre_artista" msprop:Generator_ColumnPropNameInTable="nombre_artistaColumn" msprop:Generator_UserColumnName="nombre_artista" type="xs:string" minOccurs="0" />
               <xs:element name="nombre_pelicula" msprop:Generator_ColumnVarNameInTable="columnnombre_pelicula" msprop:Generator_ColumnPropNameInRow="nombre_pelicula" msprop:Generator_ColumnPropNameInTable="nombre_peliculaColumn" msprop:Generator_UserColumnName="nombre_pelicula" type="xs:string" minOccurs="0" />
               <xs:element name="personaje" msprop:Generator_ColumnVarNameInTable="columnpersonaje" msprop:Generator_ColumnPropNameInRow="personaje" msprop:Generator_ColumnPropNameInTable="personajeColumn" msprop:Generator_UserColumnName="personaje" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="cantidadp_x_artista" msprop:Generator_TableClassName="cantidadp_x_artistaDataTable" msprop:Generator_TableVarName="tablecantidadp_x_artista" msprop:Generator_TablePropName="cantidadp_x_artista" msprop:Generator_RowDeletingName="cantidadp_x_artistaRowDeleting" msprop:Generator_RowChangingName="cantidadp_x_artistaRowChanging" msprop:Generator_RowEvHandlerName="cantidadp_x_artistaRowChangeEventHandler" msprop:Generator_RowDeletedName="cantidadp_x_artistaRowDeleted" msprop:Generator_UserTableName="cantidadp_x_artista" msprop:Generator_RowChangedName="cantidadp_x_artistaRowChanged" msprop:Generator_RowEvArgName="cantidadp_x_artistaRowChangeEvent" msprop:Generator_RowClassName="cantidadp_x_artistaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombre_artista" msprop:Generator_ColumnVarNameInTable="columnnombre_artista" msprop:Generator_ColumnPropNameInRow="nombre_artista" msprop:Generator_ColumnPropNameInTable="nombre_artistaColumn" msprop:Generator_UserColumnName="nombre_artista" type="xs:string" minOccurs="0" />
+              <xs:element name="cantidadp" msprop:Generator_ColumnVarNameInTable="columncantidadp" msprop:Generator_ColumnPropNameInRow="cantidadp" msprop:Generator_ColumnPropNameInTable="cantidadpColumn" msprop:Generator_UserColumnName="cantidadp" type="xs:short" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
