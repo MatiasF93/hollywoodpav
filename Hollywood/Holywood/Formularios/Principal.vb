@@ -21,7 +21,7 @@
         InitializeComponent()
     End Sub
 
-    Private Function obtener_socio(ByVal num_socio As Integer) As Socio
+    Public Function obtener_socio(ByVal num_socio As Integer) As Socio
         Dim tabla As Data.DataTable
         tabla = Me.acceso.leo_otra_tabla("socios", "num_socio = " + num_socio.ToString)
         Dim socio As New Socio(tabla.Rows(0)("num_socio"), tabla.Rows(0)("nombres"), tabla.Rows(0)("apellido"), _
@@ -71,6 +71,7 @@
     Public Sub cargar_grilla_peliculas()
         Me.cargar_grilla_peliculas(Me.obtener_filtros)
     End Sub
+
     Public Sub cargar_grilla_peliculas(ByVal filtros As String)
         Me.grid_peliculas.Rows.Clear()
         Me.grid_peliculas_usuarios.Rows.Clear()
@@ -238,7 +239,7 @@
     End Sub
 
 
-    Private Sub carga_combo(ByRef combo As ComboBox, ByRef datos As Data.DataTable, ByVal pk As String, _
+    Public Sub carga_combo(ByRef combo As ComboBox, ByRef datos As Data.DataTable, ByVal pk As String, _
                         ByVal descripcion As String)
         combo.Items.Clear()
         combo.DataSource = datos
