@@ -4,11 +4,11 @@
         Dim sql As String = ""
         sql = "SELECT  (artistas.nombres+' '+artistas.apellido) as nombre_artista,  peliculas.nombre as nombre_pelicula ,artistas_x_pelicula.personaje as personaje "
         sql &= " FROM artistas_x_pelicula INNER JOIN peliculas ON artistas_x_pelicula.codigo_pelicula = peliculas.codigo_pelicula INNER JOIN artistas ON artistas_x_pelicula.matricula = artistas.matricula "
-        DataSet_peliculasXartistaBindingSource.DataSource = acceso.consultar(sql)
+        peliculasXartistaBindingSource.DataSource = acceso.consultar(sql)
         Me.ReportViewer1.RefreshReport()
         Dim sql2 As String = ""
 
-        sql2 = " SELECT  (artistas.nombres+' '+artistas.apellido) as nombre_artista, SUM(artistas_x_pelicula.codigo_pelicula) AS cantidadp"
+        sql2 = " SELECT  (artistas.nombres+' '+artistas.apellido) as nombre_artista, COUNT(artistas_x_pelicula.codigo_pelicula) AS cantidadp"
         sql2 &= " FROM  artistas_x_pelicula INNER JOIN artistas ON artistas.matricula = artistas_x_pelicula.matricula "
         sql2 &= " GROUP BY (artistas.nombres+' '+artistas.apellido) "
         If Me.txt_menor.Text <> "" And Me.txt_mayor.Text <> "" Then
@@ -30,7 +30,7 @@
         sql = "SELECT  (artistas.nombres+' '+artistas.apellido) as nombre_artista,  peliculas.nombre as nombre_pelicula ,artistas_x_pelicula.personaje as personaje "
         sql &= " FROM artistas_x_pelicula INNER JOIN peliculas ON artistas_x_pelicula.codigo_pelicula = peliculas.codigo_pelicula INNER JOIN artistas ON artistas_x_pelicula.matricula = artistas.matricula "
         sql &= " WHERE (artistas.nombres+' '+artistas.apellido) LIKE '%" & Me.txt_nombre_artista.Text & "%'"
-        DataSet_peliculasXartistaBindingSource.DataSource = acceso.consultar(sql)
+        PeliculasxartistaBindingSource.DataSource = acceso.consultar(sql)
         Me.ReportViewer1.RefreshReport()
     End Sub
 
@@ -42,7 +42,7 @@
     Private Sub cmd_buscarEst_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmd_buscarEst.Click
         Dim sql As String = ""
 
-        sql = " SELECT  (artistas.nombres+' '+artistas.apellido) as nombre_artista, SUM(artistas_x_pelicula.codigo_pelicula) AS cantidadp"
+        sql = " SELECT  (artistas.nombres+' '+artistas.apellido) as nombre_artista, COUNT(artistas_x_pelicula.codigo_pelicula) AS cantidadp"
         sql &= " FROM  artistas_x_pelicula INNER JOIN artistas ON artistas.matricula = artistas_x_pelicula.matricula "
         sql &= " GROUP BY (artistas.nombres+' '+artistas.apellido) "
         If Me.txt_menor.Text <> "" And Me.txt_mayor.Text <> "" Then
@@ -53,4 +53,6 @@
         DataSet_peliculasXartistaBindingSource.DataSource = acceso.consultar(sql)
         Me.ReportViewer2.RefreshReport()
     End Sub
+
+
 End Class

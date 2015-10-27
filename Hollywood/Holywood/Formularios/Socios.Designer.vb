@@ -32,6 +32,13 @@ Partial Class frm_socios
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.grid_socios = New System.Windows.Forms.DataGridView()
+        Me.txt_numero = New System.Windows.Forms.MaskedTextBox()
+        Me.txt_documento = New System.Windows.Forms.MaskedTextBox()
+        Me.cmd_volver = New System.Windows.Forms.Button()
+        Me.cmd_nuevo = New System.Windows.Forms.Button()
+        Me.cmd_buscar = New System.Windows.Forms.Button()
+        Me.txt_apellidos = New WindowsApplication1.TextBox_v1()
+        Me.txt_nombres = New WindowsApplication1.TextBox_v1()
         Me.apellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nro_socio = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -50,13 +57,6 @@ Partial Class frm_socios
         Me.recarga_saldo = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.modificar = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.eliminar = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.txt_numero = New System.Windows.Forms.MaskedTextBox()
-        Me.txt_documento = New System.Windows.Forms.MaskedTextBox()
-        Me.cmd_volver = New System.Windows.Forms.Button()
-        Me.cmd_nuevo = New System.Windows.Forms.Button()
-        Me.cmd_buscar = New System.Windows.Forms.Button()
-        Me.txt_apellidos = New WindowsApplication1.TextBox_v1()
-        Me.txt_nombres = New WindowsApplication1.TextBox_v1()
         CType(Me.grid_socios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -164,142 +164,6 @@ Partial Class frm_socios
         Me.grid_socios.Size = New System.Drawing.Size(1017, 375)
         Me.grid_socios.TabIndex = 21
         '
-        'apellido
-        '
-        Me.apellido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.apellido.HeaderText = "Apellido"
-        Me.apellido.Name = "apellido"
-        Me.apellido.ReadOnly = True
-        Me.apellido.Width = 120
-        '
-        'nombre
-        '
-        Me.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.nombre.HeaderText = "Nombre"
-        Me.nombre.Name = "nombre"
-        Me.nombre.ReadOnly = True
-        Me.nombre.Width = 120
-        '
-        'nro_socio
-        '
-        Me.nro_socio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
-        Me.nro_socio.HeaderText = "Número"
-        Me.nro_socio.Name = "nro_socio"
-        Me.nro_socio.ReadOnly = True
-        Me.nro_socio.Width = 69
-        '
-        'tipo_doc
-        '
-        Me.tipo_doc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
-        Me.tipo_doc.HeaderText = "Tipo doc"
-        Me.tipo_doc.Name = "tipo_doc"
-        Me.tipo_doc.ReadOnly = True
-        Me.tipo_doc.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.tipo_doc.Width = 74
-        '
-        'nro_doc
-        '
-        Me.nro_doc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
-        Me.nro_doc.HeaderText = "Número doc"
-        Me.nro_doc.Name = "nro_doc"
-        Me.nro_doc.ReadOnly = True
-        Me.nro_doc.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.nro_doc.Width = 90
-        '
-        'domicilio
-        '
-        Me.domicilio.HeaderText = "Domicilio"
-        Me.domicilio.Name = "domicilio"
-        '
-        'saldo
-        '
-        Me.saldo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
-        Me.saldo.HeaderText = "Saldo"
-        Me.saldo.MinimumWidth = 20
-        Me.saldo.Name = "saldo"
-        Me.saldo.ReadOnly = True
-        Me.saldo.Width = 59
-        '
-        'id_tipo_doc
-        '
-        Me.id_tipo_doc.HeaderText = "id_tipo_doc"
-        Me.id_tipo_doc.Name = "id_tipo_doc"
-        Me.id_tipo_doc.Visible = False
-        '
-        'id_tipoIVA
-        '
-        Me.id_tipoIVA.HeaderText = "id_tipoIVA"
-        Me.id_tipoIVA.Name = "id_tipoIVA"
-        Me.id_tipoIVA.Visible = False
-        '
-        'cuit
-        '
-        Me.cuit.HeaderText = "cuit"
-        Me.cuit.Name = "cuit"
-        Me.cuit.Visible = False
-        '
-        'lim_alq
-        '
-        Me.lim_alq.HeaderText = "lim_alq"
-        Me.lim_alq.Name = "lim_alq"
-        Me.lim_alq.Visible = False
-        '
-        'tel
-        '
-        Me.tel.HeaderText = "tel"
-        Me.tel.Name = "tel"
-        Me.tel.Visible = False
-        '
-        'fecha_baja
-        '
-        Me.fecha_baja.HeaderText = "Fecha baja"
-        Me.fecha_baja.Name = "fecha_baja"
-        '
-        'ver
-        '
-        Me.ver.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
-        Me.ver.HeaderText = "Ver"
-        Me.ver.Name = "ver"
-        Me.ver.Text = "Ver"
-        Me.ver.ToolTipText = "Ver los datos completos de este socio."
-        Me.ver.UseColumnTextForButtonValue = True
-        Me.ver.Width = 29
-        '
-        'Autorizados
-        '
-        Me.Autorizados.HeaderText = "Autorizados"
-        Me.Autorizados.Name = "Autorizados"
-        Me.Autorizados.Text = "Autorizados"
-        Me.Autorizados.UseColumnTextForButtonValue = True
-        '
-        'recarga_saldo
-        '
-        Me.recarga_saldo.HeaderText = "Recargar"
-        Me.recarga_saldo.Name = "recarga_saldo"
-        Me.recarga_saldo.Text = "Recargar"
-        Me.recarga_saldo.ToolTipText = "Recarga el saldo de este socio"
-        Me.recarga_saldo.UseColumnTextForButtonValue = True
-        '
-        'modificar
-        '
-        Me.modificar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
-        Me.modificar.HeaderText = "Modificar"
-        Me.modificar.Name = "modificar"
-        Me.modificar.Text = "Modificar"
-        Me.modificar.ToolTipText = "Modificar los datos de este actor."
-        Me.modificar.UseColumnTextForButtonValue = True
-        Me.modificar.Width = 56
-        '
-        'eliminar
-        '
-        Me.eliminar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
-        Me.eliminar.HeaderText = "Eliminar "
-        Me.eliminar.Name = "eliminar"
-        Me.eliminar.Text = "Eliminar "
-        Me.eliminar.ToolTipText = "Eliminar a este actor."
-        Me.eliminar.UseColumnTextForButtonValue = True
-        Me.eliminar.Width = 52
-        '
         'txt_numero
         '
         Me.txt_numero.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -368,6 +232,137 @@ Partial Class frm_socios
         Me.txt_nombres.Name = "txt_nombres"
         Me.txt_nombres.Size = New System.Drawing.Size(127, 22)
         Me.txt_nombres.TabIndex = 0
+        '
+        'apellido
+        '
+        Me.apellido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.apellido.HeaderText = "Apellido"
+        Me.apellido.Name = "apellido"
+        Me.apellido.ReadOnly = True
+        Me.apellido.Width = 120
+        '
+        'nombre
+        '
+        Me.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.nombre.HeaderText = "Nombre"
+        Me.nombre.Name = "nombre"
+        Me.nombre.ReadOnly = True
+        Me.nombre.Width = 120
+        '
+        'nro_socio
+        '
+        Me.nro_socio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.nro_socio.HeaderText = "Número"
+        Me.nro_socio.Name = "nro_socio"
+        Me.nro_socio.ReadOnly = True
+        Me.nro_socio.Width = 69
+        '
+        'tipo_doc
+        '
+        Me.tipo_doc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.tipo_doc.HeaderText = "Tipo doc"
+        Me.tipo_doc.Name = "tipo_doc"
+        Me.tipo_doc.ReadOnly = True
+        Me.tipo_doc.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.tipo_doc.Width = 74
+        '
+        'nro_doc
+        '
+        Me.nro_doc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.nro_doc.HeaderText = "Número doc"
+        Me.nro_doc.Name = "nro_doc"
+        Me.nro_doc.ReadOnly = True
+        Me.nro_doc.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.nro_doc.Width = 90
+        '
+        'domicilio
+        '
+        Me.domicilio.HeaderText = "Domicilio"
+        Me.domicilio.Name = "domicilio"
+        '
+        'saldo
+        '
+        Me.saldo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.saldo.HeaderText = "Saldo"
+        Me.saldo.MinimumWidth = 20
+        Me.saldo.Name = "saldo"
+        Me.saldo.ReadOnly = True
+        Me.saldo.Width = 59
+        '
+        'id_tipo_doc
+        '
+        Me.id_tipo_doc.HeaderText = "id_tipo_doc"
+        Me.id_tipo_doc.Name = "id_tipo_doc"
+        '
+        'id_tipoIVA
+        '
+        Me.id_tipoIVA.HeaderText = "id_tipoIVA"
+        Me.id_tipoIVA.Name = "id_tipoIVA"
+        '
+        'cuit
+        '
+        Me.cuit.HeaderText = "cuit"
+        Me.cuit.Name = "cuit"
+        '
+        'lim_alq
+        '
+        Me.lim_alq.HeaderText = "lim_alq"
+        Me.lim_alq.Name = "lim_alq"
+        '
+        'tel
+        '
+        Me.tel.HeaderText = "tel"
+        Me.tel.Name = "tel"
+        '
+        'fecha_baja
+        '
+        Me.fecha_baja.HeaderText = "Fecha baja"
+        Me.fecha_baja.Name = "fecha_baja"
+        '
+        'ver
+        '
+        Me.ver.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.ver.HeaderText = "Ver"
+        Me.ver.Name = "ver"
+        Me.ver.Text = "Ver"
+        Me.ver.ToolTipText = "Ver los datos completos de este socio."
+        Me.ver.UseColumnTextForButtonValue = True
+        Me.ver.Width = 29
+        '
+        'Autorizados
+        '
+        Me.Autorizados.HeaderText = "Autorizados"
+        Me.Autorizados.Name = "Autorizados"
+        Me.Autorizados.Text = "Autorizados"
+        Me.Autorizados.UseColumnTextForButtonValue = True
+        '
+        'recarga_saldo
+        '
+        Me.recarga_saldo.HeaderText = "Recargar"
+        Me.recarga_saldo.Name = "recarga_saldo"
+        Me.recarga_saldo.Text = "Recargar"
+        Me.recarga_saldo.ToolTipText = "Recarga el saldo de este socio"
+        Me.recarga_saldo.UseColumnTextForButtonValue = True
+        '
+        'modificar
+        '
+        Me.modificar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.modificar.HeaderText = "Modificar"
+        Me.modificar.Name = "modificar"
+        Me.modificar.Text = "Modificar"
+        Me.modificar.ToolTipText = "Modificar los datos de este actor."
+        Me.modificar.UseColumnTextForButtonValue = True
+        Me.modificar.Width = 56
+        '
+        'eliminar
+        '
+        Me.eliminar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.eliminar.HeaderText = "Eliminar "
+        Me.eliminar.Name = "eliminar"
+        Me.eliminar.Text = "Eliminar "
+        Me.eliminar.ToolTipText = "Eliminar a este actor."
+        Me.eliminar.UseColumnTextForButtonValue = True
+        Me.eliminar.Width = 52
         '
         'frm_socios
         '

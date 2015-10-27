@@ -23,8 +23,10 @@ Partial Class Listado_peliculasXartista
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource3 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Dim ReportDataSource4 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Me.PeliculasxartistaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet_peliculasXartista = New WindowsApplication1.DataSet_peliculasXartista()
         Me.DataSet_peliculasXartistaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -40,11 +42,23 @@ Partial Class Listado_peliculasXartista
         Me.lbl_mayor = New System.Windows.Forms.Label()
         Me.ReportViewer2 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.btn_cancelar = New System.Windows.Forms.Button()
+        CType(Me.PeliculasxartistaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet_peliculasXartista, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet_peliculasXartistaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.tab_listado_artistasXpelicula.SuspendLayout()
         Me.tab_grafico_peliculasXartista.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'PeliculasxartistaBindingSource
+        '
+        Me.PeliculasxartistaBindingSource.DataMember = "peliculas_x_artista"
+        Me.PeliculasxartistaBindingSource.DataSource = Me.DataSet_peliculasXartista
+        '
+        'DataSet_peliculasXartista
+        '
+        Me.DataSet_peliculasXartista.DataSetName = "DataSet_peliculasXartista"
+        Me.DataSet_peliculasXartista.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'DataSet_peliculasXartistaBindingSource
         '
@@ -53,9 +67,9 @@ Partial Class Listado_peliculasXartista
         '
         'ReportViewer1
         '
-        ReportDataSource3.Name = "DataSet_peliculas_por_artista"
-        ReportDataSource3.Value = Me.DataSet_peliculasXartistaBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource3)
+        ReportDataSource1.Name = "DataSet_peliculas_por_artista"
+        ReportDataSource1.Value = Me.PeliculasxartistaBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "WindowsApplication1.Reporte_peliculasXartista.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(6, 6)
         Me.ReportViewer1.Name = "ReportViewer1"
@@ -172,9 +186,9 @@ Partial Class Listado_peliculasXartista
         '
         'ReportViewer2
         '
-        ReportDataSource4.Name = "DataSet1"
-        ReportDataSource4.Value = Me.DataSet_peliculasXartistaBindingSource
-        Me.ReportViewer2.LocalReport.DataSources.Add(ReportDataSource4)
+        ReportDataSource2.Name = "DataSet1"
+        ReportDataSource2.Value = Me.DataSet_peliculasXartistaBindingSource
+        Me.ReportViewer2.LocalReport.DataSources.Add(ReportDataSource2)
         Me.ReportViewer2.LocalReport.ReportEmbeddedResource = "WindowsApplication1.ReporteEst_peliculasXartista.rdlc"
         Me.ReportViewer2.Location = New System.Drawing.Point(6, 6)
         Me.ReportViewer2.Name = "ReportViewer2"
@@ -201,6 +215,8 @@ Partial Class Listado_peliculasXartista
         Me.Name = "Listado_peliculasXartista"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Reporte de películas y artistas - Hollywood"
+        CType(Me.PeliculasxartistaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet_peliculasXartista, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataSet_peliculasXartistaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.tab_listado_artistasXpelicula.ResumeLayout(False)
@@ -225,4 +241,6 @@ Partial Class Listado_peliculasXartista
     Friend WithEvents lbl_menor As System.Windows.Forms.Label
     Friend WithEvents lbl_mayor As System.Windows.Forms.Label
     Friend WithEvents cmd_buscarEst As System.Windows.Forms.Button
+    Friend WithEvents PeliculasxartistaBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents DataSet_peliculasXartista As WindowsApplication1.DataSet_peliculasXartista
 End Class

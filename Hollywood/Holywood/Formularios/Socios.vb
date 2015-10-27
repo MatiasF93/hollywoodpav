@@ -131,8 +131,10 @@
             End If
 
             If e.ColumnIndex = 16 Then
+                Me.cargar_grilla("")
+
                 registrar = New Registrar_socio(Registrar_socio.estado.modificar)
-                registrar.cargar_campos(Me.grid_socios.Rows(e.RowIndex).Cells("id_tipo_doc").Value, _
+                registrar.cargar_campos(Me.grid_socios.Rows(e.RowIndex).Cells("id_tipo_documento").Value, _
                                         Me.grid_socios.Rows(e.RowIndex).Cells("apellido").Value, _
                                         Me.grid_socios.Rows(e.RowIndex).Cells("nombre").Value, _
                                         Me.grid_socios.Rows(e.RowIndex).Cells("nro_doc").Value, _
